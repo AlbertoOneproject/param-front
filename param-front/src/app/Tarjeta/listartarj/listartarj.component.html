@@ -1,0 +1,34 @@
+<div class="card">
+    <div class="card-header">
+      <h3>Tarjetas</h3>
+    </div>
+    <div class="card-body">
+      <table class="table table-hover">
+        <thead>
+          <tr class="text-center">
+            <th>ENTIDAD</th>
+            <th>CODIGO MARCA</th>
+            <th>INDICADOR TIPO DE TARJETA</th>
+            <th>BIN ENTIDAD TIPO</th>              
+            <th>BIN PROCESO</th>
+            <th>NUMERO DE TARJETA</th>
+            <th>ACCIONES</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let tarjeta of tarjetas" class="text-center">
+            <td>{{tarjeta.codent}}</td>
+            <td>{{tarjeta.codmar}}</td>
+            <td>{{tarjeta.indtipt}}</td>
+            <td>{{tarjeta.binenttip}}</td>
+            <td>{{tarjeta.binproc}}</td>
+            <td>{{tarjeta.numulttar}}</td>
+            <td>
+              <button (click)="Editartarj(tarjeta)" class="btn btn-warning">Editar</button>
+              <button (click)="Deletetarj(tarjeta)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

@@ -11,6 +11,9 @@ import {Listar026Component} from './Mpdt026/listart026/listart026.component';
 import {Addt026Component} from './Mpdt026/addt026/addt026.component';
 import {Edit026Component} from './Mpdt026/edit026/edit026.component';
 
+import { ListartarjComponent } from './Tarjeta/listartarj/listartarj.component';
+import { AddtarjComponent } from './Tarjeta/addtarj/addtarj.component';
+import { EdittarjComponent } from './Tarjeta/edittarj/edittarj.component';
 
 const routes: Routes = [
   {path:'listarparm', component:ParmlistComponent},
@@ -21,7 +24,11 @@ const routes: Routes = [
 
   {path:'lista026',component:Listar026Component},
   {path:'addt026',component:Addt026Component},
-  {path:'edit026',component:Edit026Component}
+  {path:'edit026',component:Edit026Component},
+
+  {path:'listartarj', component:ListartarjComponent},
+  {path:'addtarj',component:AddtarjComponent},
+  {path:'edittarj',component:EdittarjComponent}
 
 
 ];
