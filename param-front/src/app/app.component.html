@@ -1,29 +1,45 @@
-<!-- Toolbar -->
 <div class="toolbar" role="banner">
-    <img width="40" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
-    />
-    <span>Bienvenidos</span>
+    <div class="spacer"></div>
+    <h3> Parametros SAT</h3>
     <div class="spacer"></div>
 </div>
-<!-- Content -->
+
 <div class="content" role="main">
 
-    <div class="container text-center">
-        <h3 href=""> MANTENIMIENTO DE PARAMETROS SAT </h3><br>
-        <button (click)="Listarparametro()" class="btn btn-info">Listar parámetros</button>
-        <button (click)="Nuevoparametro()" class="btn btn-info" style="margin-left: 10px;">Nuevo parámetro</button>
-        <button (click)="Listar026Component()" class="btn btn-info" style="margin-left:10px;">Listar MPDT026</button>
-        <button (click)="Nuevo026()" class="btn btn-info" style="margin-left: 10px;">Nuevo 026</button>    
-        <br>
-        <br>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Mantenimiento</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               Tarifas
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <button (click)="Listar026Component()" class="dropdown-item">Tarifas</button>
+                <a class="dropdown-item" href="#">Marca de tarjeta</a>
+                <a class="dropdown-item" href="listarprod">Productos</a>
+                <a class="dropdown-item" href="lista026">Tipo de tarjeta</a>
+                
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Bienes y prefijos
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <button (click)="Listar026Component()" class="dropdown-item">Bienes y prefijos</button>
+                  <a class="dropdown-item" href="#">Asignación y Uuo</a>
 
-    <div class="container text-center">
-        <h3 href=""> MANTENIMIENTO DE PRODUCTOS</h3><br>
-        <button (click)="Listarproducto()" class="btn btn-info">Productos</button>
-        <br>
-        <br>
-    </div>
+                </div>
+              </li>
+          </ul>
+        </div>
+      </nav>
+
 
 
 
