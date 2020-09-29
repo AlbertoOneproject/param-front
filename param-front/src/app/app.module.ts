@@ -17,9 +17,9 @@ import { Mpdt026Service} from '../app/Service/mpdt026.service';
 import { Listar026Component } from './Mpdt026/listart026/listart026.component';
 import { Edit026Component } from './Mpdt026/edit026/edit026.component';
 import { Addt026Component } from './Mpdt026/addt026/addt026.component';
-import { AddtarjComponent } from './Tarjeta/addtarj/addtarj/addtarj.component';
-import { EdittarjComponent } from './Tarjeta/edittarj/edittarj/edittarj.component';
-import { ListartarjComponent } from './Tarjeta/listartarj/listartarj/listartarj.component';
+import { AddtarjComponent } from './Tarjeta/addtarj/addtarj.component';
+import { EdittarjComponent } from './Tarjeta/edittarj/edittarj.component';
+import { ListartarjComponent } from './Tarjeta/listartarj/listartarj.component';
 
 @NgModule({
   declarations: [
