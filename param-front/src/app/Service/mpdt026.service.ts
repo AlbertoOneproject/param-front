@@ -17,6 +17,13 @@ export class Mpdt026Service {
       console.log("llave" +codent+codmar);
       return this.http.get<Mpdt026>(this.Url+"/"+codent+codmar);  
     }
+
+    getMpdt026Filtro(
+      entidad:String,
+      marca:String){
+        
+        return this.http.get<Mpdt026>(this.Url+"/?entidad="+ entidad+"&marca=" + marca);  
+      }
   updateMpdt026(mpdt026:Mpdt026){
       return this.http.put<Mpdt026>(this.Url,mpdt026);
     }    
