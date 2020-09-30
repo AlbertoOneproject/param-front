@@ -12,20 +12,36 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrls: ['./alta.component.css']
 })
 export class AltaComponent implements OnInit {
-  altaMpparamsat: FormGroup;
+  altaMpdt088: FormGroup;
   mpdt088: Mpdt088;
 
   codent;
-  centalta;
   producto;
   subprodu;
-  condpro;
-  codcam;
-  codconven;
-  codpromo;
-  numper;
-  numperaval;
-  indctaemp;
+  codmar;
+  indtipt;
+  fecalta;
+  fecbaja;
+  limcremes;
+  limdebmes;
+  maxoper;
+  limcredia;
+  limdebdia;
+  limdiacaj;
+  maxopecaj;
+  maxodia;
+  salmaxmon;
+  cargamax;
+  consumax;
+  indacpalt;
+  indacpren;
+  vigtar;
+  vigtarren;
+  codentumo;
+  codofiumo;
+  usuarioumo;
+  codtermumo;
+  contcur;
 
 
   constructor(private formBuilder: FormBuilder,
@@ -35,28 +51,44 @@ export class AltaComponent implements OnInit {
 
   ngOnInit(): void {
 
-     this.altaMpparamsat = this.formBuilder.group({
+     this.altaMpdt088 = this.formBuilder.group({
        'codent': new FormControl('', [Validators.required]),
-       'centalta': new FormControl('', [Validators.required]),
        'producto': new FormControl('', [Validators.required]),
        'subprodu': new FormControl('', [Validators.required]),
-       'condpro': new FormControl('', [Validators.required]),
-       'codcam': new FormControl('', [Validators.required]),
-       'codconven': new FormControl('', [Validators.required]),
-       'codpromo': new FormControl('', [Validators.required]),
-       'numper': new FormControl('', [Validators.required]),
-       'numperaval': new FormControl('', [Validators.required]),
-       'indctaemp': new FormControl('', [Validators.required])
+       'codmar': new FormControl('', [Validators.required]),
+       'indtipt': new FormControl('', [Validators.required]),
+       'fecalta': new FormControl('', [Validators.required]),
+       'fecbaja': new FormControl('', [Validators.required]),
+       'limcremes': new FormControl('', [Validators.required]),
+       'limdebmes': new FormControl('', [Validators.required]),
+       'maxoper': new FormControl('', [Validators.required]),
+       'limcredia': new FormControl('', [Validators.required]),
+       'limdebdia': new FormControl('', [Validators.required]),
+       'limdiacaj': new FormControl('', [Validators.required]),
+       'maxopecaj': new FormControl('', [Validators.required]),
+       'maxodia': new FormControl('', [Validators.required]),
+       'salmoxon': new FormControl('', [Validators.required]),
+       'cargamax': new FormControl('', [Validators.required]),
+       'consumax': new FormControl('', [Validators.required]),
+       'indacpalt': new FormControl('', [Validators.required]),
+       'indacpren': new FormControl('', [Validators.required]),
+       'vigtar': new FormControl('', [Validators.required]),
+       'vigtarren': new FormControl('', [Validators.required]),
+       'codentumo': new FormControl('', [Validators.required]),
+       'codofiumo': new FormControl('', [Validators.required]),
+       'usuarioumo': new FormControl('', [Validators.required]),
+       'codtermumo': new FormControl('', [Validators.required]),
+       'contcur': new FormControl('', [Validators.required])
      });
 
   }
 
-  get ant1() { return this.altaMpparamsat.controls; }
+  get ant1() { return this.altaMpdt088.controls; }
 
   addMppamsat(){
 
 
-    if (this.altaMpparamsat.invalid){
+    if (this.altaMpdt088.invalid){
         return;
     }
 
