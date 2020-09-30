@@ -97,21 +97,11 @@ export class AltaComponent implements OnInit {
       codmar: this.ant1.codmar.value, indtipt: this.ant1.indtipt.value, fecalta: this.ant1.fecalta.value, 
       fecbaja: this.ant1.fecbaja.value, limcremes: this.ant1.limcremes.value, limdebmes: this.ant1.limdebmes.value,
       maxoper: this.ant1.maxoper.value, limcredia: this.ant1.limcredia.value, limdebdia: this.ant1.limdebdia.value,
-      limdiacaj:0,
-      maxopecaj:7,
-      maxodia:8,
-      salmaxmon:9,
-      cargamax:2,
-      consumax:3,
-      indacpalt:"ofiv",
-      indacpren:"ofiv",
-      vigtar:5,
-      vigtarren:6,
-      codentumo:"ofiv",
-      codofiumo:"ofiv",
-      usuarioumo:"ofiv",
-      codtermumo:"ofiv",
-      contcur:"ofiv"} 
+      limdiacaj: this.ant1.limdiacaj.value, maxopecaj: this.ant1.maxopecaj.value, maxodia: this.ant1.maxodia.value,
+      salmaxmon: this.ant1.salmaxmon.value, cargamax: this.ant1.cargamax.value, consumax: this.ant1.consumax.value,
+      indacpalt: this.ant1.indacpalt.value, indacpren: this.ant1.indacpren.value, vigtar: this.ant1.vigtar.value,
+      vigtarren: this.ant1.vigtarren.value, codentumo: this.ant1.codentumo.value, codofiumo: this.ant1.codofiumo.value,
+      usuarioumo: this.ant1.usuarioumo.value, codtermumo: this.ant1.limdiacaj.value, contcur: this.ant1.contcur.value,} 
 
     this.service.createMpdt088(this.mpdt088)
     .subscribe(data=>{
