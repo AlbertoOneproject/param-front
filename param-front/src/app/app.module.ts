@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
+import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ParmlistComponent } from './Parametros/parmlist/parmlist.component';
@@ -26,6 +27,13 @@ import { AddtarjComponent } from './Tarjeta/addtarj/addtarj.component';
 import { EdittarjComponent } from './Tarjeta/edittarj/edittarj.component';
 import { ListartarjComponent } from './Tarjeta/listartarj/listartarj.component';
 
+import { AgregarProductoComponent } from './ProductoSat/agregar-producto/agregar-producto.component';
+import { EditarProductoComponent } from './ProductoSat/editar-producto/editar-producto.component';
+import { ListarProductoComponent } from './ProductoSat/listar-producto/listar-producto.component';
+import { ProductoSatService } from './Service/producto-sat.service';
+import { ViewProductosComponent } from './ProductoSat/view-productos/view-productos.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,16 +51,23 @@ import { ListartarjComponent } from './Tarjeta/listartarj/listartarj.component';
     DialogoConfirmacionComponent,
     AddtarjComponent,
     EdittarjComponent,
-    ListartarjComponent
+    ListartarjComponent,
+    
+    ViewProductosComponent,    /*OMDA*/ 
+    AgregarProductoComponent,  /*OMDA*/
+    EditarProductoComponent,   /*OMDA*/
+    ListarProductoComponent,   /*OMDA*/
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [ParametroService, ProductoService, Mpdt026Service, Mpdt088Service,
+              ProductoSatService
    ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

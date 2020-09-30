@@ -29,4 +29,8 @@ export class AppComponent {
     this.router.navigate(["lista026"]);
   }
 
+  viewProductos() {
+    this.router.navigate(["viewProductos"]);
+  }
+
 }

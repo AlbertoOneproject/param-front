@@ -15,6 +15,11 @@ import { ListartarjComponent } from './Tarjeta/listartarj/listartarj.component';
 import { AddtarjComponent } from './Tarjeta/addtarj/addtarj.component';
 import { EdittarjComponent } from './Tarjeta/edittarj/edittarj.component';
 
+import { ViewProductosComponent } from './ProductoSat/view-productos/view-productos.component';
+import { ListarProductoComponent } from './ProductoSat/listar-producto/listar-producto.component';
+import { EditarProductoComponent } from './ProductoSat/editar-producto/editar-producto.component';
+import { AgregarProductoComponent } from './ProductoSat/agregar-producto/agregar-producto.component';
+
 const routes: Routes = [
   {path:'listarparm', component:ParmlistComponent},
   {path:'addparm',component:ParmaddComponent},
@@ -28,9 +33,24 @@ const routes: Routes = [
 
   {path:'listartarj', component:ListartarjComponent},
   {path:'addtarj',component:AddtarjComponent},
-  {path:'edittarj',component:EdittarjComponent}
+  {path:'edittarj',component:EdittarjComponent},
 
-
+  {path: 
+    'viewProductos', 
+    component: ViewProductosComponent,
+    children :[{ 
+                path: 'listProductoSat', 
+                component: ListarProductoComponent,
+              }, 
+              { 
+                path: 'editProductoSat', 
+                component: EditarProductoComponent,
+              }, 
+              { 
+                path: 'addProductoSat', 
+                component: AgregarProductoComponent,
+              }]
+  }
 ];
 
 @NgModule({
