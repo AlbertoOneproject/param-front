@@ -1,0 +1,50 @@
+<div class="card">
+    <table>
+      <tr>
+        <td width="70%"> 
+          <div class="card-body">
+            <table class="table table-hover">
+              <thead>
+                  <tr class="text-center">
+                      <th>ENTIDAD  </th>  
+                      <th>PRODUCTO </th>  
+                      <th>SUBPRODUCTO</th>  
+                      <th>CODIGO LINEA</th>
+                      <th>GRUPO</th>  
+                      <th>PRODUCTO VENDIBLE</th>  
+                      <th>TARIFA</th>  
+                      <th>CODIGO LINEA MP</th>  
+                      <th>GRUPO MP</th>  
+                      <th>PRODUCTO VENDIBLE MP</th>  
+                      <th>TARIFA MP</th>  
+                      <th>ACCIONES</th>  
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let productoSat of productosSat" class="text-center">
+                  <td>{{productoSat.codNrbeEnt}}</td>
+                  <td>{{productoSat.idPrdSat}}</td>
+                  <td>{{productoSat.idSPrdSat}}</td>
+                  <td>{{productoSat.codLinea}}</td>
+                  <td>{{productoSat.idGrpPd}}</td>
+                  <td>{{productoSat.idPdv}}</td>
+                  <td>{{productoSat.idTrfaPdv}}</td>
+                  <td>{{productoSat.codLineaMP}}</td>
+                  <td>{{productoSat.idGrpPdMP}}</td>
+                  <td>{{productoSat.idPdvMP}}</td>
+                  <td>{{productoSat.idTrfaPdvMP}}</td>
+                  <td>
+                      <button (click)="editProductoSat(productoSat)" class="btn btn-warning" style="margin-left: 10px;">Editar</button>
+                      <button (click)="deleteProductoSat(productoSat)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+                  </td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+      </tr>  
+    </table>
+    
+</div>
+
+

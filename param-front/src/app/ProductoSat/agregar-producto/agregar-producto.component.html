@@ -1,0 +1,57 @@
+<div class="container col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h3>Agregar producto</h3>
+      </div>
+      <div class="card-body">
+        <form action="">
+          <div class="form-group">
+            <label for="">Entidad:</label>
+            <input [(ngModel)]="productoSat.codNrbeEnt" name="codNrbeEnt" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Producto:</label>
+            <input [(ngModel)]="productoSat.idPrdSat" name="idPrdSat" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Sub producto:</label>
+            <input [(ngModel)]="productoSat.idSPrdSat" name="idSPrdSat" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Código línea:</label>
+            <input [(ngModel)]="productoSat.codLinea" name="codLinea" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Grupo:</label>
+            <input [(ngModel)]="productoSat.idGrpPd" name="idGrpPd" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Producto vendible:</label>
+            <input [(ngModel)]="productoSat.idPdv" name="IdPdv" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Tarifa:</label>
+            <input [(ngModel)]="productoSat.idTrfaPdv" name="idTrfaPdv" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Código Línea MP:</label>
+            <input [(ngModel)]="productoSat.codLineaMP" name="codLineaMP" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Grupo MP:</label>
+            <input [(ngModel)]="productoSat.idGrpPdMP" name="idGrpPdMP" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Producto vendible MP:</label>
+            <input [(ngModel)]="productoSat.idPdvMP" name="idPdvMP" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Tarifa MP:</label>
+            <input [(ngModel)]="productoSat.idTrfaPdvMP" name="idTrfaPdvMP" type="text" class="form-control">
+          </div>
+          <button (click)="saveProductoSat()" class="btn btn-danger">Registrar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
