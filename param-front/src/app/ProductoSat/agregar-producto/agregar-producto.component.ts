@@ -32,7 +32,7 @@ export class AgregarProductoComponent implements OnInit {
     this.service.postProductoSat(this.productoSat)
     .subscribe(data => {
       //alert("Registro agregado exitosamente!");
-      this.router.navigate(["listProductoSat"]);
+      this.router.navigate(["viewProductos/listProductoSat"]);
     })
   }
 
