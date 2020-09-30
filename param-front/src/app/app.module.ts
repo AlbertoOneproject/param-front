@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { ParmlistComponent } from './Parametros/parmlist/parmlist.component';
 import { ParmeditComponent } from './Parametros/parmedit/parmedit.component';
 import { ParmaddComponent } from './Parametros/parmadd/parmadd.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { ParametroService } from '../app/Service/parametro.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ParmdelComponent } from './Parametros/parmdel/parmdel.component';
@@ -47,6 +47,7 @@ import { ListartarjComponent } from './Tarjeta/listartarj/listartarj.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [ParametroService, ProductoService, Mpdt026Service, Mpdt088Service,
