@@ -1,1 +1,85 @@
-<p>editar works!</p>
+<div style="width: 100%; ">
+    <mat-card class="example-container">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>EDITAR</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="container" >
+      <form [formGroup]="editaMpparamsat" fxLayout="form-horizontal">
+  
+          <mat-form-field appearance="fill">
+            <mat-label>CODENT</mat-label>
+            <input matInput formControlName="codent" type="text" required [value]="codent" maxlength="4">
+            <mat-error *ngIf="editaMpparamsat.get('codent').invalid">dato obligatorio</mat-error>
+          </mat-form-field>
+  
+          <mat-form-field appearance="fill">
+            <mat-label>CENTALTA</mat-label>
+            <input matInput formControlName="centalta" required [value]="centalta" maxlength="4">
+            <mat-error *ngIf="editaMpparamsat.get('centalta').invalid">dato obligatorio</mat-error>
+          </mat-form-field>
+  
+          <mat-form-field appearance="fill">
+            <mat-label>PRODUCTO</mat-label>
+            <input matInput formControlName="producto" required [value]="producto" maxlength="2">
+            <mat-error *ngIf="editaMpparamsat.get('producto').invalid">dato obligatorio</mat-error>
+          </mat-form-field>
+  
+          <mat-form-field appearance="fill">
+            <mat-label>SUBPRODU</mat-label>
+            <input matInput formControlName="subprodu" required [value]="subprodu" maxlength="4">
+            <mat-error *ngIf="editaMpparamsat.get('subprodu').invalid">dato obligatorio</mat-error>
+          </mat-form-field>
+  
+          <mat-form-field appearance="fill">
+            <mat-label>CONDPRO</mat-label>
+            <input matInput formControlName="condpro" required [value]="condpro" maxlength="3">
+            <mat-error *ngIf="editaMpparamsat.get('condpro').invalid">dato obligatorio</mat-error>
+          </mat-form-field>
+  
+          <mat-form-field appearance="fill">
+            <mat-label>CODCAM</mat-label>
+            <input matInput formControlName="codcam" required [value]="codcam" maxlength="6">
+            <mat-error *ngIf="editaMpparamsat.get('codcam').invalid">dato obligatorio</mat-error>
+          </mat-form-field>
+            
+          <mat-form-field appearance="fill">
+            <mat-label>CODCONVEN</mat-label>
+            <input matInput formControlName="codconven" required [value]="codconven" maxlength="4">
+            <mat-error *ngIf="editaMpparamsat.get('codconven').invalid">dato obligatorio</mat-error>
+          </mat-form-field>
+  
+          <mat-form-field appearance="fill">
+            <mat-label>CODPROMO</mat-label>
+            <input matInput formControlName="codpromo" required [value]="codpromo" maxlength="3">
+            <mat-error *ngIf="editaMpparamsat.get('codpromo').invalid">dato obligatorio</mat-error>
+          </mat-form-field>
+  
+          <mat-form-field appearance="fill">
+            <mat-label>NUMPER</mat-label>
+            <input matInput formControlName="numper" required [value]="numper" maxlength="10">
+            <mat-error *ngIf="editaMpparamsat.get('numper').invalid">dato obligatorio</mat-error>
+          </mat-form-field>
+  
+          <mat-form-field appearance="fill">
+            <mat-label>NUMPERAVAL</mat-label>
+            <input matInput formControlName="numperaval" required [value]="numperaval"  maxlength="10">
+            <mat-error *ngIf="editaMpparamsat.get('numperaval').invalid">dato obligatorio</mat-error>
+          </mat-form-field>
+  
+          <mat-form-field appearance="fill">
+            <mat-label>INDCTAEMP</mat-label>
+            <input matInput formControlName="indctaemp" required [value]="indctaemp" maxlength="1">
+            <mat-error *ngIf="editaMpparamsat.get('indctaemp').invalid">dato obligatorio</mat-error>
+          </mat-form-field>
+  
+          <div style="text-align: right; align-items: right;">
+          <button mat-raised-button color="primary" (click)="editMppamsat()" type="button">Guardar</button>
+          <button mat-raised-button color="primary" (click)="cancelar()">Cancelar</button>
+        </div>
+  
+  
+      </form>
+    </mat-card-content>
+  </mat-card>
+  </div>

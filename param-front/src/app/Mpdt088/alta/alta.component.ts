@@ -101,7 +101,7 @@ export class AltaComponent implements OnInit {
       salmaxmon: this.ant1.salmaxmon.value, cargamax: this.ant1.cargamax.value, consumax: this.ant1.consumax.value,
       indacpalt: this.ant1.indacpalt.value, indacpren: this.ant1.indacpren.value, vigtar: this.ant1.vigtar.value,
       vigtarren: this.ant1.vigtarren.value, codentumo: this.ant1.codentumo.value, codofiumo: this.ant1.codofiumo.value,
-      usuarioumo: this.ant1.usuarioumo.value, codtermumo: this.ant1.limdiacaj.value, contcur: this.ant1.contcur.value,} 
+      usuarioumo: this.ant1.usuarioumo.value, codtermumo: this.ant1.limdiacaj.value, contcur: this.ant1.contcur.value} 
 
     this.service.createMpdt088(this.mpdt088)
     .subscribe(data=>{
