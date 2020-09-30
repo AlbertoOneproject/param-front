@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -49,7 +49,9 @@ import { ListartarjComponent } from './Tarjeta/listartarj/listartarj.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [ParametroService, ProductoService, Mpdt026Service, Mpdt088Service],
-  bootstrap: [AppComponent]
+  providers: [ParametroService, ProductoService, Mpdt026Service, Mpdt088Service,
+   ],
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

@@ -5,76 +5,175 @@
       <mat-card-title>EDITAR</mat-card-title>
     </mat-card-header>
     <mat-card-content class="container" >
-      <form [formGroup]="editaMpparamsat" fxLayout="form-horizontal">
+      <form [formGroup]="editaMpdt088" fxLayout="form-horizontal">
   
           <mat-form-field appearance="fill">
             <mat-label>CODENT</mat-label>
             <input matInput formControlName="codent" type="text" required [value]="codent" maxlength="4">
-            <mat-error *ngIf="editaMpparamsat.get('codent').invalid">dato obligatorio</mat-error>
+            <mat-error *ngIf="editaMpdt088.get('codent').invalid">dato obligatorio</mat-error>
           </mat-form-field>
   
-          <mat-form-field appearance="fill">
-            <mat-label>CENTALTA</mat-label>
-            <input matInput formControlName="centalta" required [value]="centalta" maxlength="4">
-            <mat-error *ngIf="editaMpparamsat.get('centalta').invalid">dato obligatorio</mat-error>
-          </mat-form-field>
   
           <mat-form-field appearance="fill">
             <mat-label>PRODUCTO</mat-label>
             <input matInput formControlName="producto" required [value]="producto" maxlength="2">
-            <mat-error *ngIf="editaMpparamsat.get('producto').invalid">dato obligatorio</mat-error>
+            <mat-error *ngIf="editaMpdt088.get('producto').invalid">dato obligatorio</mat-error>
           </mat-form-field>
   
           <mat-form-field appearance="fill">
             <mat-label>SUBPRODU</mat-label>
             <input matInput formControlName="subprodu" required [value]="subprodu" maxlength="4">
-            <mat-error *ngIf="editaMpparamsat.get('subprodu').invalid">dato obligatorio</mat-error>
+            <mat-error *ngIf="editaMpdt088.get('subprodu').invalid">dato obligatorio</mat-error>
           </mat-form-field>
   
           <mat-form-field appearance="fill">
             <mat-label>CONDPRO</mat-label>
-            <input matInput formControlName="condpro" required [value]="condpro" maxlength="3">
-            <mat-error *ngIf="editaMpparamsat.get('condpro').invalid">dato obligatorio</mat-error>
+            <input matInput formControlName="codmar" required [value]="codmar" maxlength="3">
+            <mat-error *ngIf="editaMpdt088.get('codmar').invalid">dato obligatorio</mat-error>
           </mat-form-field>
   
           <mat-form-field appearance="fill">
             <mat-label>CODCAM</mat-label>
-            <input matInput formControlName="codcam" required [value]="codcam" maxlength="6">
-            <mat-error *ngIf="editaMpparamsat.get('codcam').invalid">dato obligatorio</mat-error>
+            <input matInput formControlName="indtipt" required [value]="indtipt" maxlength="6">
+            <mat-error *ngIf="editaMpdt088.get('indtipt').invalid">dato obligatorio</mat-error>
           </mat-form-field>
             
           <mat-form-field appearance="fill">
             <mat-label>CODCONVEN</mat-label>
-            <input matInput formControlName="codconven" required [value]="codconven" maxlength="4">
-            <mat-error *ngIf="editaMpparamsat.get('codconven').invalid">dato obligatorio</mat-error>
+            <input matInput formControlName="fecalta" required [value]="fecalta" maxlength="4">
+            <mat-error *ngIf="editaMpdt088.get('fecalta').invalid">dato obligatorio</mat-error>
           </mat-form-field>
   
           <mat-form-field appearance="fill">
             <mat-label>CODPROMO</mat-label>
-            <input matInput formControlName="codpromo" required [value]="codpromo" maxlength="3">
-            <mat-error *ngIf="editaMpparamsat.get('codpromo').invalid">dato obligatorio</mat-error>
+            <input matInput formControlName="fecbaja" required [value]="fecbaja" maxlength="3">
+            <mat-error *ngIf="editaMpdt088.get('fecbaja').invalid">dato obligatorio</mat-error>
           </mat-form-field>
   
           <mat-form-field appearance="fill">
             <mat-label>NUMPER</mat-label>
-            <input matInput formControlName="numper" required [value]="numper" maxlength="10">
-            <mat-error *ngIf="editaMpparamsat.get('numper').invalid">dato obligatorio</mat-error>
+            <input matInput formControlName="limcremes" required [value]="limcremes" maxlength="10">
+            <mat-error *ngIf="editaMpdt088.get('limcremes').invalid">dato obligatorio</mat-error>
           </mat-form-field>
   
           <mat-form-field appearance="fill">
             <mat-label>NUMPERAVAL</mat-label>
-            <input matInput formControlName="numperaval" required [value]="numperaval"  maxlength="10">
-            <mat-error *ngIf="editaMpparamsat.get('numperaval').invalid">dato obligatorio</mat-error>
+            <input matInput formControlName="limdebmes" required [value]="limdebmes"  maxlength="10">
+            <mat-error *ngIf="editaMpdt088.get('limdebmes').invalid">dato obligatorio</mat-error>
           </mat-form-field>
   
           <mat-form-field appearance="fill">
             <mat-label>INDCTAEMP</mat-label>
-            <input matInput formControlName="indctaemp" required [value]="indctaemp" maxlength="1">
-            <mat-error *ngIf="editaMpparamsat.get('indctaemp').invalid">dato obligatorio</mat-error>
+            <input matInput formControlName="maxoper" required [value]="maxoper" maxlength="1">
+            <mat-error *ngIf="editaMpdt088.get('maxoper').invalid">dato obligatorio</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>INDCTAEMP</mat-label>
+            <input matInput formControlName="limcredia" required [value]="limcredia" maxlength="1">
+            <mat-error *ngIf="editaMpdt088.get('limcredia').invalid">dato obligatorio</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>INDCTAEMP</mat-label>
+            <input matInput formControlName="limdebdia" required [value]="limdebdia" maxlength="1">
+            <mat-error *ngIf="editaMpdt088.get('limdebdia').invalid">dato obligatorio</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>INDCTAEMP</mat-label>
+            <input matInput formControlName="limdiacaj" required [value]="limdiacaj" maxlength="1">
+            <mat-error *ngIf="editaMpdt088.get('limdiacaj').invalid">dato obligatorio</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>INDCTAEMP</mat-label>
+            <input matInput formControlName="maxopecaj" required [value]="maxopecaj" maxlength="1">
+            <mat-error *ngIf="editaMpdt088.get('maxopecaj').invalid">dato obligatorio</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>INDCTAEMP</mat-label>
+            <input matInput formControlName="maxodia" required [value]="maxodia" maxlength="1">
+            <mat-error *ngIf="editaMpdt088.get('maxodia').invalid">dato obligatorio</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>INDCTAEMP</mat-label>
+            <input matInput formControlName="salmaxmon" required [value]="salmaxmon" maxlength="1">
+            <mat-error *ngIf="editaMpdt088.get('salmaxmon').invalid">dato obligatorio</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>INDCTAEMP</mat-label>
+            <input matInput formControlName="cargamax" required [value]="cargamax" maxlength="1">
+            <mat-error *ngIf="editaMpdt088.get('cargamax').invalid">dato obligatorio</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>INDCTAEMP</mat-label>
+            <input matInput formControlName="consumax" required [value]="consumax" maxlength="1">
+            <mat-error *ngIf="editaMpdt088.get('consumax').invalid">dato obligatorio</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>INDCTAEMP</mat-label>
+            <input matInput formControlName="indacpalt" required [value]="indacpalt" maxlength="1">
+            <mat-error *ngIf="editaMpdt088.get('indacpalt').invalid">dato obligatorio</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>INDCTAEMP</mat-label>
+            <input matInput formControlName="indacpren" required [value]="indacpren" maxlength="1">
+            <mat-error *ngIf="editaMpdt088.get('indacpren').invalid">dato obligatorio</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>INDCTAEMP</mat-label>
+            <input matInput formControlName="vigtar" required [value]="vigtar" maxlength="1">
+            <mat-error *ngIf="editaMpdt088.get('vigtar').invalid">dato obligatorio</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>INDCTAEMP</mat-label>
+            <input matInput formControlName="vigtarren" required [value]="vigtarren" maxlength="1">
+            <mat-error *ngIf="editaMpdt088.get('vigtarren').invalid">dato obligatorio</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>INDCTAEMP</mat-label>
+            <input matInput formControlName="codentumo" required [value]="codentumo" maxlength="1">
+            <mat-error *ngIf="editaMpdt088.get('codentumo').invalid">dato obligatorio</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>INDCTAEMP</mat-label>
+            <input matInput formControlName="codofiumo" required [value]="codofiumo" maxlength="1">
+            <mat-error *ngIf="editaMpdt088.get('codofiumo').invalid">dato obligatorio</mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>INDCTAEMP</mat-label>
+            <input matInput formControlName="usuarioumo" required [value]="usuarioumo" maxlength="1">
+            <mat-error *ngIf="editaMpdt088.get('usuarioumo').invalid">dato obligatorio</mat-error>
+          </mat-form-field>
+
+          
+          <mat-form-field appearance="fill">
+            <mat-label>INDCTAEMP</mat-label>
+            <input matInput formControlName="codtermumo" required [value]="codtermumo" maxlength="1">
+            <mat-error *ngIf="editaMpdt088.get('codtermumo').invalid">dato obligatorio</mat-error>
+          </mat-form-field>
+
+          
+          <mat-form-field appearance="fill">
+            <mat-label>INDCTAEMP</mat-label>
+            <input matInput formControlName="contcur" required [value]="contcur" maxlength="1">
+            <mat-error *ngIf="editaMpdt088.get('contcur').invalid">dato obligatorio</mat-error>
           </mat-form-field>
   
           <div style="text-align: right; align-items: right;">
-          <button mat-raised-button color="primary" (click)="editMppamsat()" type="button">Guardar</button>
+          <button mat-raised-button color="primary" (click)="editMpdt088()" type="button">Guardar</button>
           <button mat-raised-button color="primary" (click)="cancelar()">Cancelar</button>
         </div>
   

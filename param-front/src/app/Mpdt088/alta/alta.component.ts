@@ -85,7 +85,7 @@ export class AltaComponent implements OnInit {
 
   get ant1() { return this.altaMpdt088.controls; }
 
-  addMppamsat(){
+  addMpdt088(){
 
 
     if (this.altaMpdt088.invalid){

@@ -136,7 +136,7 @@ export class EditarComponent implements OnInit {
 
   get ant1() { return this.editaMpdt088.controls; }
 
-  editMppamsat(){
+  editMpdt088(){
 
     console.log("entra")
 
