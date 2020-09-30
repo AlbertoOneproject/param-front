@@ -1,0 +1,83 @@
+<div mat-dialog-content>
+    <mat-card class="example-container">
+      <mat-card-header >
+        <mat-card-title  >ALTA</mat-card-title>
+      </mat-card-header> 
+      <mat-card-content class="container" >
+        <form [formGroup]="altaMpparamsat"  >   
+    
+            <mat-form-field  >
+              <mat-label>CODENT</mat-label>
+              <input matInput formControlName="codent"  required maxlength="4">
+              <mat-error *ngIf="altaMpparamsat.get('codent').invalid">dato obligatorio</mat-error>
+            </mat-form-field>
+       
+            <mat-form-field  >
+              <mat-label>CENTALTA</mat-label>
+              <input matInput formControlName="centalta" required maxlength="4">
+              <mat-error *ngIf="altaMpparamsat.get('codent').invalid">dato obligatorio</mat-error>
+            </mat-form-field>
+       
+            <mat-form-field  >
+              <mat-label>PRODUCTO</mat-label>
+              <input matInput formControlName="producto" required maxlength="2">
+              <mat-error *ngIf="altaMpparamsat.get('codent').invalid">dato obligatorio</mat-error>
+            </mat-form-field>
+      
+            <mat-form-field  >
+              <mat-label>SUBPRODU</mat-label>
+              <input matInput formControlName="subprodu" required maxlength="4">
+              <mat-error *ngIf="altaMpparamsat.get('codent').invalid">dato obligatorio</mat-error>
+            </mat-form-field>
+       
+            <mat-form-field >
+              <mat-label>CONDPRO</mat-label>
+              <input matInput formControlName="condpro" required maxlength="3">
+              <mat-error *ngIf="altaMpparamsat.get('codent').invalid">dato obligatorio</mat-error>
+            </mat-form-field>
+       
+            <mat-form-field  >
+              <mat-label>CODCAM</mat-label>
+              <input matInput formControlName="codcam" required maxlength="6">
+              <mat-error *ngIf="altaMpparamsat.get('codent').invalid">dato obligatorio</mat-error>
+            </mat-form-field>
+       
+            <mat-form-field  class="m-r-8">
+              <mat-label>CODCONVEN</mat-label>
+              <input matInput formControlName="codconven" required maxlength="4">
+              <mat-error *ngIf="altaMpparamsat.get('codent').invalid">dato obligatorio</mat-error>
+            </mat-form-field>
+    
+            <mat-form-field  >
+              <mat-label>CODPROMO</mat-label>
+              <input matInput formControlName="codpromo" required maxlength="3">
+              <mat-error *ngIf="altaMpparamsat.get('codent').invalid">dato obligatorio</mat-error>
+            </mat-form-field>
+      
+            <mat-form-field  >
+              <mat-label>NUMPER</mat-label>
+              <input matInput formControlName="numper" required maxlength="10">
+              <mat-error *ngIf="altaMpparamsat.get('codent').invalid">dato obligatorio</mat-error>
+            </mat-form-field>
+    
+            <mat-form-field  >
+              <mat-label>NUMPERAVAL</mat-label>
+              <input matInput formControlName="numperaval" required maxlength="10">
+              <mat-error *ngIf="altaMpparamsat.get('codent').invalid">dato obligatorio</mat-error>
+            </mat-form-field>
+      
+            <mat-form-field >
+              <mat-label>INDCTAEMP</mat-label>
+              <input matInput formControlName="indctaemp" required maxlength="1">
+              <mat-error *ngIf="altaMpparamsat.get('codent').invalid">dato obligatorio</mat-error>
+            </mat-form-field>
+            <br>
+       
+            <div style="text-align: right; align-items: right;">
+              <button mat-raised-button color="primary" (click)="addMppamsat()" type="button">Agregar</button>
+              <button mat-raised-button color="primary" (click)="cancelar()">Cancelar</button>
+            </div>
+        </form> 
+      </mat-card-content>
+    </mat-card>
+    </div>
