@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, FormControl, Validators  } from '@angular/forms';
 import { Mpdt088 } from '../../Modelo/mpdt088.model';
 import { Mpdt088Service } from '../../Service/mpdt088.service';
 import { Router } from '@angular/router';
@@ -85,7 +85,7 @@ export class AltaComponent implements OnInit {
 
   get ant1() { return this.altaMpdt088.controls; }
 
-  addMppamsat(){
+  addMpdt088(){
 
 
     if (this.altaMpdt088.invalid){
