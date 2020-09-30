@@ -18,12 +18,13 @@ export class Mpdt026Service {
       return this.http.get<Mpdt026>(this.Url+"/"+codent+codmar);  
     }
 
+    //Nuevo filtro
     getMpdt026Filtro(
       entidad:String,
       marca:String){      
         return this.http.get<Mpdt026[]>(this.Url+"/?entidad="+ entidad+"&marca=" + marca);  
       }
-      
+    //Nueva consulta solo entidad  
     getMpdt026Entidad(
       ){
        return this.http.get<string[]>(this.Url+"/entidad");
