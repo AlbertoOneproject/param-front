@@ -1,0 +1,18 @@
+.example-container .mat-form-field + .mat-form-field {
+    margin-left: 12px;
+  }
+  
+  .example-container .mat-form-field {
+    width: 255px;
+  }
+  .example-container form {
+    margin-bottom: 20px;
+  }
+  
+  .example-container form > * {
+    margin: 5px 0;
+  }
+  
+  button {
+    margin-right: 5px;
+  }

@@ -14,6 +14,8 @@ import { ParmdelComponent } from './Parametros/parmdel/parmdel.component';
 import { ListarprodComponent } from './Producto/listarprod/listarprod.component';
 import { ProductoService } from './Service/producto.service';
 import { Mpdt026Service} from '../app/Service/mpdt026.service';
+import { Mpdt088Service} from '../app/Service/mpdt088.service';
+import { AltaComponent } from '../app/Mpdt088/alta';
 import { Listar026Component } from './Mpdt026/listart026/listart026.component';
 import { Edit026Component } from './Mpdt026/edit026/edit026.component';
 import { Addt026Component } from './Mpdt026/addt026/addt026.component';
@@ -32,6 +34,7 @@ import { ListartarjComponent } from './Tarjeta/listartarj/listartarj.component';
     Listar026Component,
     Edit026Component,
     Addt026Component,
+    AltaComponent,
     AddtarjComponent,
     EdittarjComponent,
     ListartarjComponent
@@ -42,7 +45,7 @@ import { ListartarjComponent } from './Tarjeta/listartarj/listartarj.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [ParametroService, ProductoService, Mpdt026Service ],
+  providers: [ParametroService, ProductoService, Mpdt026Service, Mpdt088Service],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
