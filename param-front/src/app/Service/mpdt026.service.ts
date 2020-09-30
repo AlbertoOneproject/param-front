@@ -20,10 +20,16 @@ export class Mpdt026Service {
 
     getMpdt026Filtro(
       entidad:String,
-      marca:String){
-        
-        return this.http.get<Mpdt026>(this.Url+"/?entidad="+ entidad+"&marca=" + marca);  
+      marca:String){      
+        return this.http.get<Mpdt026[]>(this.Url+"/?entidad="+ entidad+"&marca=" + marca);  
       }
+      
+    getMpdt026Entidad(
+      ){
+       return this.http.get<string[]>(this.Url+"/entidad");
+      }
+
+
   updateMpdt026(mpdt026:Mpdt026){
       return this.http.put<Mpdt026>(this.Url,mpdt026);
     }    

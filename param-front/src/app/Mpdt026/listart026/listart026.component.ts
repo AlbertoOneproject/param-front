@@ -10,27 +10,27 @@ import { Mpdt026} from 'src/app/Modelo/Mpdt026';
 })
 
 export class Listar026Component implements OnInit {
+  public listaEntidad: string[];
+  public seleccionado: string;
   mpdt026s:Mpdt026[]; 
   constructor(private service:Mpdt026Service, private router:Router) { }
 
-  /*jasg*/
+  
   
   ngOnInit(): void {
-    /*this.service.getMpdt026()
+    this.service.getMpdt026Entidad()
     .subscribe(data => {
-      this.mpdt026s = data;
-
-  })*/
+      this.listaEntidad = data; 
+  })
   }
 
   Buscar(){
-    this.service.getMpdt026()
+    this.service.getMpdt026Filtro(this.seleccionado,'')
     .subscribe(data => {
       this.mpdt026s = data;
 
   })
 }
-
 
   Editar026(mpdt026:Mpdt026):void{
     localStorage.setItem("codent",mpdt026.codent.toString());
@@ -38,6 +38,7 @@ export class Listar026Component implements OnInit {
     console.log("llaveCTS"+mpdt026.codent+mpdt026.codmar);
     this.router.navigate(["edit026"]);  
   }
+
   deleteMpdt026(mpdt026:Mpdt026){
     localStorage.setItem("codent",mpdt026.codent.toString());
     localStorage.setItem("codmar",mpdt026.codmar.toString()); 
