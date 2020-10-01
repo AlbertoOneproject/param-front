@@ -36,15 +36,14 @@ export class EditarProductoComponent implements OnInit {
       .subscribe(data => {
         this.productoSat = data;
       });
-
   }
 
   updateProductoSat(productoSat : ProductoSat) {
     //alert('Actualiza JSON: ' + JSON.stringify(productoSat) );
     this.service.putProductoSat(productoSat)
-    .subscribe((data : any) => {
-      this.productoSat = data;
+    .subscribe((data) => {
       alert('Registro modificado exitosamente');
+      this.router.navigate(["viewProductos/listProductoSat"]);
     })
   }
 
