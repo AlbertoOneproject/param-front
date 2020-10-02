@@ -14,6 +14,7 @@ export class ViewProductosComponent implements OnInit {
 
   ngOnInit(): void {
     this.listProductoSat();
+
   }
 
   addProductoSat(){

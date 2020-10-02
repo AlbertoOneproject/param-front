@@ -12,6 +12,8 @@ import { Subscriber, Subscription } from 'rxjs';
 //export class ListarProductoComponent implements OnInit, OnDestroy {
 export class ListarProductoComponent implements OnInit {  
   productosSat : ProductoSat[];
+  lstEntidades : string[];
+  entidadSelect : string;
   
   constructor(private service: ProductoSatService, private router: Router, private route: ActivatedRoute) { }
   
@@ -21,9 +23,16 @@ export class ListarProductoComponent implements OnInit {
     this.service.getProductoSat().subscribe(data => {
       this.productosSat = data;
       console.log(data.toString());
+    });
+
+    this.service.getEntidadesSat()
+      .subscribe(data => {
+        this.lstEntidades = data;
+      });
+  
     
       //alert(JSON.stringify(data).toString());
-    });
+    
   }
 
  /*  ngOnDestroy(){
@@ -35,6 +44,8 @@ export class ListarProductoComponent implements OnInit {
     localStorage.setItem("idPrdSat", productoSat.idPrdSat.toString());
     localStorage.setItem("idSPrdSat", productoSat.idSPrdSat.toString());
     localStorage.setItem("codLinea", productoSat.codLinea.toString());
+
+    localStorage.setItem("modoBtn", "Modificacion");
     
     this.router.navigate(["viewProductos/editProductoSat"])
   }
@@ -53,6 +64,12 @@ export class ListarProductoComponent implements OnInit {
         this.productosSat = this.productosSat.filter(p => p !== productoSat);
         alert("Registro eliminado ...");
       })
+  }
+
+  listProductosEntidad(codNrbeEnt : String ): void {
+    this.service.getProductosEntidad(codNrbeEnt).subscribe(data => {
+        this.productosSat = data;
+    });
   }
 
   
