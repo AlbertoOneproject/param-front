@@ -9,12 +9,13 @@ import { Mpdt026} from 'src/app/Modelo/Mpdt026';
   styleUrls: ['./listart026.component.css']
 })
 
-export class Listar026Component implements OnInit {
+export class Listart026Component implements OnInit {
   public listaEntidad: string[];
+  public listaMarca: string[];
   public seleccionado: string;
+  public seleccionadom: string;
   mpdt026s:Mpdt026[]; 
   constructor(private service:Mpdt026Service, private router:Router) { }
-
   
   
   ngOnInit(): void {
@@ -25,11 +26,20 @@ export class Listar026Component implements OnInit {
   }
 
   Buscar(){
-    this.service.getMpdt026Filtro(this.seleccionado,'')
+//jasg    this.service.getMpdt026Filtro(this.seleccionado,'')
+     console.log("Buscar")
+    this.service.getMpdt026Marca(this.seleccionado,'')  
     .subscribe(data => {
-      this.mpdt026s = data;
-
+      console.log("Data Marca")
+      console.log(data)
+      this.listaMarca = data;
   })
+}
+BuscarMarca(){
+  this.service.getMpdt026Filtro(this.seleccionado,this.seleccionadom)
+  .subscribe(data => {
+    this.mpdt026s = data;
+})
 }
 
   Editar026(mpdt026:Mpdt026):void{

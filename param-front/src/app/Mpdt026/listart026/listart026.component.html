@@ -1,76 +1,100 @@
-
- 
-
-  <!---Titulo y boton de agregar -->
+<!---Titulo y boton de agregar -->
 <div class="container-fluid  mainparam">
-  <div class="row">
-      <div class="col-4">
-      </div>
-      <div class="col-4 text-center">
-          <h3>Tipo de Tarjeta</h3>
-      </div>
-      <div class="col-4 text-right">
-        
-        <a class="btn btn-success btn-lg rounded-circle" href="addt026">+</a>
-       </div>
-  </div>
+    <div class="row">
+        <div class="col-4">
+        </div>
+        <div class="col-4 text-center">
+            <h3>Tipo de Tarjeta</h3>
+        </div>
+        <div class="col-4 text-right">
+
+            <a class="btn btn-success btn-lg rounded-circle" href="addt026">+</a>
+        </div>
+    </div>
 </div>
 <!--seccion de busqueda-->
 <div class="container-fluid mainparam">
-<form>
-  <div class="form-row align-items-center ">
-    <div class="col-3">
-      <label class="mr-sm-2" for="inlineFormCustomSelect">Entidad</label>
-      <select class="custom-select mr-sm-2" id="selectEntidad" name="selectEntidad" [(ngModel)]="seleccionado" > 
+    <form>
+        <div class="form-row align-items-center ">
+            <div class="col-3">
+                <label class="mr-sm-2" for="inlineFormCustomSelect">Entidad</label>
+                <select class="custom-select mr-sm-2" id="selectEntidad" name="selectEntidad" [(ngModel)]="seleccionado " (click)="Buscar()"> 
         <option value="">Seleccione una opción...</option>
-        <option [value]="item" *ngFor="let item of listaEntidad">{{item}}</option>    
+        <option [value]="item" (click)="Buscar()" *ngFor="let item of listaEntidad"> {{item}} </option>    
       </select>
-      
-    </div>
-    <div class="col-3 ">
-      <button (click)="Buscar()" class="btn btn-primary">Buscar</button>
-      <button type="submit" class="btn btn-info">Limpiar</button>
-    </div>
-    <div class="col-3">
-     
-   </div>
-    <div class="col-3">
-      
-    </div>
-  </div>
-</form>
+
+            </div>
+            <!--            
+            <div class="col-3 ">
+                <button (click)="Buscar()" class="btn btn-primary">Buscar</button>
+                <button type="submit" class="btn btn-info">Limpiar</button>
+            </div>
+-->
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+
+            </div>
+        </div>
+
+        <div class="form-row align-items-center ">
+            <div class="col-3">
+                <label class="mr-sm-2" for="inlineFormCustomSelect">Marca</label>
+                <select class="custom-select mr-sm-2" id="selectMarca" name="selectMarca" [(ngModel)]="seleccionadom"> 
+        <option value="">Seleccione una opción...</option>
+        <option [value]="item" *ngFor="let item of listaMarca">{{item}}</option>    
+      </select>
+
+            </div>
+            <div class="col-3 ">
+                <button (click)="BuscarMarca()" class="btn btn-primary">Buscar</button>
+                <button type="submit" class="btn btn-info">Limpiar</button>
+            </div>
+            <div class="col-3">
+
+            </div>
+            <div class="col-3">
+
+            </div>
+        </div>
+
+
+
+
+    </form>
 </div>
 
 <div class="card">
-  <div class="card-header">
-    <h5>Lista registros - Mpdt026</h5>
-  </div>
-  <div class="card-body">
-    <table class="table table-hover">
-      <thead>
-        <tr class="text-center">
-          <th>ENTIDAD</th>
-          <th>Codigo de marca</th>
-          <th>Tipo de tarjeta</th>
-          <th>clase</th>
-          <th>Descripcion Tipo</th>
-          <th>Descripcion tipo RED</th>              
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let mpdt026 of mpdt026s" class="text-center">
-          <td>{{mpdt026.codent}}</td>
-          <td>{{mpdt026.codmar}}</td>
-          <td>{{mpdt026.indtipt}}</td>
-          <td>{{mpdt026.clase}}</td>
-          <td>{{mpdt026.destipt}}</td>
-          <td>{{mpdt026.destiptred}}</td>
-          <td>
-            <button (click)="Editar026(mpdt026)" class="btn btn-warning">Editar</button>
-            <button (click)="deleteMpdt026(mpdt026)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+    <div class="card-header">
+        <h5>Lista registros - Mpdt026</h5>
+    </div>
+    <div class="card-body">
+        <table class="table table-hover">
+            <thead>
+                <tr class="text-center">
+                    <th>ENTIDAD</th>
+                    <th>Codigo de marca</th>
+                    <th>Tipo de tarjeta</th>
+                    <th>clase</th>
+                    <th>Descripcion Tipo</th>
+                    <th>Descripcion tipo RED</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let mpdt026 of mpdt026s" class="text-center">
+                    <td>{{mpdt026.codent}}</td>
+                    <td>{{mpdt026.codmar}}</td>
+                    <td>{{mpdt026.indtipt}}</td>
+                    <td>{{mpdt026.clase}}</td>
+                    <td>{{mpdt026.destipt}}</td>
+                    <td>{{mpdt026.destiptred}}</td>
+                    <td>
+                        <button (click)="Editar026(mpdt026)" class="btn btn-warning">Editar</button>
+                        <button (click)="deleteMpdt026(mpdt026)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

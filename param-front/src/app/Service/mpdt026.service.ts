@@ -10,7 +10,7 @@ export class Mpdt026Service {
   getMpdt026(){
     return this.http.get<Mpdt026[]>(this.Url);
   }
-
+  
   getMpdt026Id(
     codent:String,
     codmar:String){
@@ -19,9 +19,14 @@ export class Mpdt026Service {
     }
 
     //Nuevo filtro
-    getMpdt026Filtro(
+  getMpdt026Filtro(
       entidad:String,
-      marca:String){      
+      marca:String)  
+      {      
+        console.log("entidad, marca");
+        console.log(entidad)
+        console.log(marca)
+
         return this.http.get<Mpdt026[]>(this.Url+"/?entidad="+ entidad+"&marca=" + marca);  
       }
     //Nueva consulta solo entidad  
@@ -30,6 +35,16 @@ export class Mpdt026Service {
        return this.http.get<string[]>(this.Url+"/entidad");
       }
 
+    //Nueva consulta de Marca
+    getMpdt026Marca(entidad:String,marca:String
+      ){
+        console.log("entidad para marca");
+        console.log(entidad)
+        
+       return this.http.get<string[]>(this.Url+"/mpdt026/"+entidad);
+      }
+
+      
 
   updateMpdt026(mpdt026:Mpdt026){
       return this.http.put<Mpdt026>(this.Url,mpdt026);

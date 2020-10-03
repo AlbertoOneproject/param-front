@@ -20,7 +20,7 @@ import { AltaComponent } from '../app/Mpdt088/alta';
 import { EditarComponent } from '../app/Mpdt088/editar';
 import { ListarComponent } from '../app/Mpdt088/listar';
 import { DialogoConfirmacionComponent } from '../app/Mpdt088/dialogo-confirmacion';
-import { Listar026Component } from './Mpdt026/listart026/listart026.component';
+import { Listart026Component } from './Mpdt026/listart026/listart026.component';
 import { Edit026Component } from './Mpdt026/edit026/edit026.component';
 import { Addt026Component } from './Mpdt026/addt026/addt026.component';
 import { AddtarjComponent } from './Tarjeta/addtarj/addtarj.component';
@@ -42,7 +42,7 @@ import { ViewProductosComponent } from './ProductoSat/view-productos/view-produc
     ParmaddComponent,
     ParmdelComponent,
     ListarprodComponent,
-    Listar026Component,
+    Listart026Component,
     Edit026Component,
     Addt026Component,
     AltaComponent,
