@@ -31,5 +31,13 @@ export class ProductoSatService {
   delProductoSat(codNrbeEnt :String, idPrdSat :String, idSPrdSat :String, codLinea  :String){
     return this.http.delete<ProductoSat> (this.url+ "/" + codNrbeEnt + idPrdSat + idSPrdSat + codLinea)
   }
+
+  getEntidadesSat(){
+    return this.http.get<string[]> (this.url + "/entidades" )
+  }
+  
+  getProductosEntidad(codNrbeEnt : String) {
+    return this.http.get<ProductoSat[]>(this.url + "/productosentidad/" + codNrbeEnt);
+  }
 }
 
