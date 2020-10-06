@@ -6,6 +6,9 @@ import {ParmaddComponent } from './Parametros/parmadd/parmadd.component';
 import {ParmeditComponent } from './Parametros/parmedit/parmedit.component';
 
 import { ListarprodComponent } from './Producto/listarprod/listarprod.component';
+import { AddprodComponent } from './Producto/addprod/addprod.component';
+import { EditprodComponent } from './Producto/editprod/editprod.component';
+
 
 import {Listart026Component} from './Mpdt026/listart026/listart026.component';
 import {Addt026Component} from './Mpdt026/addt026/addt026.component';
@@ -26,6 +29,8 @@ const routes: Routes = [
   {path:'editparm',component:ParmeditComponent},
 
   {path:'listarprod', component:ListarprodComponent},
+  {path:'addprod',component:AddprodComponent},
+  {path:'editprod',component:EditprodComponent},
 
   {path:'lista026',component:Listart026Component},
   {path:'addt026',component:Addt026Component},

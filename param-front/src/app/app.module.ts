@@ -12,8 +12,12 @@ import { ParametroService } from '../app/Service/parametro.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ParmdelComponent } from './Parametros/parmdel/parmdel.component';
 
+
+import { EditprodComponent } from './Producto/editprod/editprod.component';
+import { AddprodComponent } from './Producto/addprod/addprod.component';
 import { ListarprodComponent } from './Producto/listarprod/listarprod.component';
 import { ProductoService } from './Service/producto.service';
+
 import { Mpdt026Service} from '../app/Service/mpdt026.service';
 import { Mpdt088Service} from '../app/Service/mpdt088.service';
 import { AltaComponent } from '../app/Mpdt088/alta';
@@ -30,9 +34,8 @@ import { ListartarjComponent } from './Tarjeta/listartarj/listartarj.component';
 import { AgregarProductoComponent } from './ProductoSat/agregar-producto/agregar-producto.component';
 import { EditarProductoComponent } from './ProductoSat/editar-producto/editar-producto.component';
 import { ListarProductoComponent } from './ProductoSat/listar-producto/listar-producto.component';
-import { ProductoSatService } from './Service/producto-sat.service';
 import { ViewProductosComponent } from './ProductoSat/view-productos/view-productos.component';
-
+import { ProductoSatService } from './Service/producto-sat.service';
 
 @NgModule({
   declarations: [
@@ -56,7 +59,7 @@ import { ViewProductosComponent } from './ProductoSat/view-productos/view-produc
     ViewProductosComponent,    /*OMDA*/ 
     AgregarProductoComponent,  /*OMDA*/
     EditarProductoComponent,   /*OMDA*/
-    ListarProductoComponent,   /*OMDA*/
+    ListarProductoComponent, AddprodComponent, EditprodComponent,   /*OMDA*/
     
   ],
   imports: [

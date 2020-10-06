@@ -1,4 +1,4 @@
-  
+<!---Titulo y boton de agregar -->
 <div class="container-fluid  mainparam">
     <div class="row">
         <div class="col-4">
@@ -7,17 +7,70 @@
             <h3>Productos</h3>
         </div>
         <div class="col-4 text-right">
-          <button (click)="Nuevoprod()"  class="btn btn-success btn-lg rounded-circle">+</button>
-         </div>
+
+            <a class="btn btn-success btn-lg rounded-circle" href="addprod">+</a>
+        </div>
     </div>
 </div>
 
-<div class="card">
-    <div class="card-header">
-        
-        <h5>Lista registros - Mpdt043</h5>
-        
+<div class="container-fluid  mainparam">
+    <div class="row">
+
+        <div class="form-group">
+            <div class="col-6">
+                <label class="mr-sm-2" for="inlineFormCustomSelect">Entidad:</label>
+                <select class="custom-select mr-sm-2" id="idEntidad" name="idEntidad" [(ngModel)]="entidadSelect" (change)='onOptionsSelected($event)' required> 
+                <option value="" selected>Seleccione una opción...</option>
+                <option [value]="item" *ngFor="let item of lstEntidades">{{item}}</option>    
+                </select>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <div class="col-6">
+
+                <label class="mr-sm-2" for="inlineFormCustomSelect">Producto:</label>
+                <select class="custom-select mr-sm-2" id="producto" name="producto" [(ngModel)]="productoSelect" (change)='onOptionsSelectedProd($event)' required> 
+                  <option value="" selected>Seleccione una opción...</option>
+                  <option [value]="item" *ngFor="let item of lstProductos">{{item}}</option>    
+                </select>
+
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-6">
+
+                <label class="mr-sm-2" for="inlineFormCustomSelect">Subproducto:</label>
+                <select class="custom-select mr-sm-2" id="subproducto" name="subproducto" [(ngModel)]="subProductoSelect" required> 
+                  <option value="" selected>Seleccione una opción...</option>
+                  <option [value]="item" *ngFor="let item of lstSubProductos">{{item}}</option>    
+                </select>
+
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-row align-items-center ">
+                <div class="col-6 ">
+                    <button (click)="Buscar()" class="btn btn-primary">Buscar</button>
+                </div>
+
+                <div class="col-6">
+                    <button (click)="Limpiar()" class="btn btn-info">Limpiar</button>
+                </div>
+
+            </div>
+        </div>
+
     </div>
+
+
+
+
+
+</div>
+
+<div class="card">
+
     <div class="card-body">
         <table class="table table-hover">
             <thead>
@@ -29,31 +82,34 @@
                     <th>CLAMON</th>
                     <th>DESPROD</th>
                     <th>DESPRODRED</th>
-                    <th>FECHA ALTA</th>
                     <th>INDRIESGO</th>
                     <th>LIMCRECTAMIN</th>
                     <th>LIMCRECTAMAX</th>
                     <th>LIMCRECOMPMIN</th>
                     <th>LIMCRECOMPMAX</th>
+                    <th>ACCIONES</th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let producto of producto" class="text-center">
-                    <td>
-                        <a ng-click="Editarprod(producto)">{{producto.codent}}</a>
-                    </td>
+                    <td>{{producto.codent}}</td>
                     <td>{{producto.producto}}</td>
                     <td>{{producto.subprodu}}</td>
                     <td>{{producto.vertiente}}</td>
                     <td>{{producto.clamon}}</td>
                     <td>{{producto.desprod}}</td>
                     <td>{{producto.desprodred}}</td>
-                    <td>{{producto.fecalta}}</td>
+                    <!--<td>{{producto.fecalta}}</td> -->
                     <td>{{producto.indriesgo}}</td>
                     <td>{{producto.limcrectamin}}</td>
                     <td>{{producto.limcrectamax}}</td>
                     <td>{{producto.limcrecompmin}}</td>
                     <td>{{producto.limcrecompmax}}</td>
+                    <td>
+                        <button (click)="Editarprod(producto)" class="btn btn-warning">Editar</button>
+                        <button (click)="Borrarprod(producto)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+                    </td>
+
                 </tr>
             </tbody>
         </table>

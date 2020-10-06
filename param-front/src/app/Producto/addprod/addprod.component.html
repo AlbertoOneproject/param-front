@@ -1,0 +1,54 @@
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h3>Agregar Producto</h3>
+        </div>
+        <div class="card-body">
+            <!---->
+            <form action="">
+
+                <div class="form-group">
+
+                    <label class="mr-sm-2" for="inlineFormCustomSelect">Entidad:</label>
+                    <select class="custom-select mr-sm-2" id="idEntidad" name="idEntidad" [(ngModel)]="entidadSelect" (change)='onOptionsSelected($event)' required> 
+                      <option value="">Seleccione una opción...</option>
+                      <option [value]="item" *ngFor="let item of lstEntidades">{{item}}</option>    
+                    </select>
+
+                </div>
+                <div class="form-group">
+
+                    <label class="mr-sm-2" for="inlineFormCustomSelect">Producto:</label>
+                    <select class="custom-select mr-sm-2" id="producto" name="producto" [(ngModel)]="productoSelect" (change)='onOptionsSelectedProd($event)' required> 
+                      <option value="">Seleccione una opción...</option>
+                      <option [value]="item" *ngFor="let item of lstProductos">{{item}}</option>    
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label class="mr-sm-2" for="inlineFormCustomSelect">Subproducto:</label>
+                    <select class="custom-select mr-sm-2" id="subproducto" name="subproducto" [(ngModel)]="subProductoSelect" required> 
+                      <option value="">Seleccione una opción...</option>
+                      <option [value]="item" *ngFor="let item of lstSubProductos">{{item}}</option>    
+                    </select>
+
+                </div>
+                <div class="form-group">
+                    <label for="">Vertiente:</label>
+                    <input [(ngModel)]="producto.vertiente" name="vertiente" type="text" class="form-control" [attr.maxlength]="1">
+                </div>
+                <div class="form-group">
+                    <label for="">Clamon:</label>
+                    <input [(ngModel)]="producto.clamon" name="clamon" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Descripción:</label>
+                    <input [(ngModel)]="producto.desprod" name="desprod" type="text" class="form-control" [attr.maxlength]="30">
+                </div>
+                <button (click)="Guardarprod()" class="btn btn-danger">Guardar</button>
+            </form>
+        </div>
+    </div>
+</div>
