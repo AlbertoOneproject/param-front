@@ -36,6 +36,7 @@ import { EditarProductoComponent } from './ProductoSat/editar-producto/editar-pr
 import { ListarProductoComponent } from './ProductoSat/listar-producto/listar-producto.component';
 import { ViewProductosComponent } from './ProductoSat/view-productos/view-productos.component';
 import { ProductoSatService } from './Service/producto-sat.service';
+import { TarjetaService } from './Service/tarjeta.service';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,7 @@ import { ProductoSatService } from './Service/producto-sat.service';
     HttpClientModule,
   ],
   providers: [ParametroService, ProductoService, Mpdt026Service, Mpdt088Service,
-              ProductoSatService
+              ProductoSatService,TarjetaService
    ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

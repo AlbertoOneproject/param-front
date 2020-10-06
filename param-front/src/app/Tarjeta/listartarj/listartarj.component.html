@@ -1,6 +1,7 @@
 <div class="card">
     <div class="card-header">
       <h3>Tarjetas</h3>
+      <button (click)="Addtarj" class="btn btn-warning">Alta MPDT0025</button>
     </div>
     <div class="card-body">
       <table class="table table-hover">
@@ -24,8 +25,8 @@
             <td>{{tarjeta.binproc}}</td>
             <td>{{tarjeta.numulttar}}</td>
             <td>
-              <button (click)="Editartarj(tarjeta)" class="btn btn-warning">Editar</button>
-              <button (click)="Deletetarj(tarjeta)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+              <button (click)="edittarj(tarjeta)" class="btn btn-warning">Editar</button>
+              <button (click)="deletetarj(tarjeta)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
             </td>
           </tr>
         </tbody>
