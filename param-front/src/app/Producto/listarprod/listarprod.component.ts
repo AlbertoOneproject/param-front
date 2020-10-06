@@ -40,16 +40,22 @@ export class ListarprodComponent implements OnInit {
 
     console.log(this.entidadSelect.toString());
 
+    this.productoSelect = "";
+
     this.service.getLstProductos(this.entidadSelect.toString())
       .subscribe(data => {
         this.lstProductos = data;
       });
+
+      this.lstSubProductos = [];
 
   }
 
   public onOptionsSelectedProd(event) {
 
     console.log(this.productoSelect.toString());
+
+    this.subProductoSelect = "";
 
     this.service.getLstSubProductos(this.entidadSelect.toString() + this.productoSelect.toString())
       .subscribe(data => {
@@ -66,9 +72,6 @@ export class ListarprodComponent implements OnInit {
     let prod = '00';
     let sub = '0000';
     let id = '';
-
-
-    
 
     if (this.entidadSelect != undefined) {
 
@@ -100,7 +103,15 @@ console.log('*****************************');
   }
 
   Limpiar() {
-    //ngOnInit;
+
+        this.lstEntidades = [];
+        this.lstProductos = [];
+        this.lstSubProductos = [];
+
+    this.service.getProductos()
+    .subscribe(data => {
+      this.producto = data;
+    });
   }
 
 
