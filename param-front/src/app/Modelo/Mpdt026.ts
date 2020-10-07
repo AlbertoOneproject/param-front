@@ -12,4 +12,5 @@ export class Mpdt026 {
     codtermumo:String;
     contcur:String; 
     contcur51:String; 
+    contcur52:String; 
 }
