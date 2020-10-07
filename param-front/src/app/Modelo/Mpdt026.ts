@@ -11,6 +11,4 @@ export class Mpdt026 {
     usuarioumo:String;
     codtermumo:String;
     contcur:String; 
-    contcur2:String; 
-    contcur1:String; 
 }
