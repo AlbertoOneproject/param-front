@@ -13,4 +13,5 @@ export class Mpdt026 {
     contcur:String; 
     contcur51:String; 
     contcur52:String; 
+    
 }
