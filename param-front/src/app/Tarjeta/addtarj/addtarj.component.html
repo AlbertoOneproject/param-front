@@ -5,18 +5,46 @@
       </div>
       <div class="card-body">
         <form action="">
+
           <div class="form-group">
+            <label class="mr-sm-2" for="inlineFormCustomSelect">Entidad</label>
+            <select class="custom-select mr-sm-2" id="idEntidad" name="idEntidad" [(ngModel)]="entidadSelect" > 
+              <option value="">Seleccione una opción...</option>
+              <option [value]="item" *ngFor="let item of lstEntidades">{{item}}</option>    
+            </select>
+          </div>
+<!-- 
+         <div class="form-group">
             <label for="">Entidad:</label>
             <input [(ngModel)]="tarjeta.codent" name="codent" type="text" class="form-control">
           </div>
+--> 
+          <div class="form-group">
+            <label class="mr-sm-2" for="inlineFormCustomSelect">Código de marca</label>
+            <select class="custom-select mr-sm-2" id="idMarca" name="idMarca" [(ngModel)]="marcaSelect" > 
+              <option value="">Seleccione una opción...</option>
+              <option [value]="item" *ngFor="let item of lstMarcas">{{item}}</option>    
+            </select>
+          </div>
+<!--
           <div class="form-group">
             <label for="">Código Marca:</label>
             <input [(ngModel)]="tarjeta.codmar" name="codmar" type="text" class="form-control">
           </div>
+-->
+          <div class="form-group">
+            <label class="mr-sm-2" for="inlineFormCustomSelect">Indicador de tipo de tarjeta</label>
+            <select class="custom-select mr-sm-2" id="idITipTarj" name="ITipTarj" [(ngModel)]="iTipTarjSelect" > 
+              <option value="">Seleccione una opción...</option>
+              <option [value]="item" *ngFor="let item of lstITipTarj">{{item}}</option>    
+            </select>
+          </div>
+<!--
           <div class="form-group">
             <label for="">Ind Tipo de Tarj:</label>
             <input [(ngModel)]="tarjeta.indtipt" name="indtipt" type="text" class="form-control">
           </div>
+-->
           <div class="form-group">
             <label for="">BIN Entidad:</label>
             <input [(ngModel)]="tarjeta.binenttip" name="binenttip" type="text" class="form-control">

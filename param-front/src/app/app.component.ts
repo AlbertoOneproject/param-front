@@ -33,4 +33,7 @@ export class AppComponent {
     this.router.navigate(["viewProductos"]);
   }
 
+  listartarj() {
+    this.router.navigate(["listartarj"]);
+  }
 }

@@ -5,8 +5,11 @@ import { Tarjeta } from '../Modelo/Tarjeta';
 @Injectable()
 export class TarjetaService {
   
+  lstEntidades : string[];
+
   constructor(private http:HttpClient) { }
   Url='http://localhost:8080/mpdt025';
+  UrlServ='http://localhost:8080/mpdt026';
 
   getTarjetas(){
     return this.http.get<Tarjeta[]>(this.Url);
@@ -14,13 +17,28 @@ export class TarjetaService {
   createTarjeta(tarjeta:Tarjeta){
     return this.http.post<Tarjeta>(this.Url,tarjeta);
   }
-  getTarjetaId(codent:String,codmar:String,indtipt:String){
-    return this.http.get<Tarjeta>(this.Url+"/"+codent+codmar+indtipt);
+  getTarjetaId(codent:String,codmar:String,indtipt:String,binenttip:String,binproc:String,numulttar:String){
+    return this.http.get<Tarjeta>(this.Url+"/unico?codent="+codent+"&codmar="+codmar+"&indtipt="+indtipt+"&binenttip="+binenttip+"&binproc="+binproc+"&numulttar="+numulttar);
   }
   updateTarjeta(tarjeta:Tarjeta){
       return this.http.put<Tarjeta>(this.Url,tarjeta);
   }
-  deleteTarjeta(codent:String,codmar:String,indtipt:String){
-    return this.http.delete<Tarjeta>(this.Url+"/"+codent+codmar+indtipt);
+  deleteTarjeta(codent:String,codmar:String,indtipt:String,binenttip:String,binproc:String,numulttar:String){
+    return this.http.delete<Tarjeta>(this.Url+"/?codent="+codent+"&codmar="+codmar+"&indtipt="+indtipt+"&binenttip="+binenttip+"&binproc="+binproc+"&numulttar="+numulttar);
   }
+
+  //http://localhost:8080/mpdt025/?codent=0903&codmar=20&indtipt=33&binenttip=551507&binproc=551507&numulttar=0
+
+  getEntidades(){
+    return this.http.get<string[]>(this.UrlServ+"/entidad");
+  } 
+  
+  getMarcas(){
+    return this.http.get<string[]>(this.UrlServ+"/marca");
+  }
+
+  getITipTarj(){
+    return this.http.get<string[]>(this.UrlServ+"/itipotarj");
+  }
+
 }

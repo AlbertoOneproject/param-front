@@ -10,7 +10,7 @@ import { Tarjeta } from 'src/app/Modelo/Tarjeta';
 })
 export class ListartarjComponent implements OnInit {
   tarjetas: Tarjeta[];
-  constructor(private service: TarjetaService, private router: Router) { }
+  constructor(private service:TarjetaService,private router:Router) { }
 
   ngOnInit() {
     this.service.getTarjetas()
@@ -18,7 +18,7 @@ export class ListartarjComponent implements OnInit {
         this.tarjetas = data;
       });
   }
-  Editartarj(tarjeta:Tarjeta):void{
+  Edittarj(tarjeta:Tarjeta):void{
     localStorage.setItem("codent",tarjeta.codent.toString());
     localStorage.setItem("codmar",tarjeta.codmar.toString());
     localStorage.setItem("indtipt",tarjeta.indtipt.toString());
@@ -28,6 +28,9 @@ export class ListartarjComponent implements OnInit {
     this.router.navigate(["edittarj"]);
   }
 
+  Addtarj():void{
+    this.router.navigate(["addtarj"]);
+  }
   Deletetarj(tarjeta:Tarjeta){
     localStorage.setItem("codent",tarjeta.codent.toString());
     localStorage.setItem("codmar",tarjeta.codmar.toString());
@@ -35,7 +38,7 @@ export class ListartarjComponent implements OnInit {
     localStorage.setItem("binenttip",tarjeta.binenttip.toString());
     localStorage.setItem("binproc",tarjeta.binproc.toString());
     localStorage.setItem("numulttar",tarjeta.numulttar.toString());
-    this.service.deleteTarjeta(tarjeta.codent.toString(),tarjeta.codmar.toString(),tarjeta.indtipt.toString())
+    this.service.deleteTarjeta(tarjeta.codent.toString(),tarjeta.codmar.toString(),tarjeta.indtipt.toString(),tarjeta.binenttip.toString(),tarjeta.binproc.toString(),tarjeta.numulttar.toString())
     .subscribe(data=>{
       this.tarjetas=this.tarjetas.filter(p=>p!==tarjeta);
       alert("Tarjeta eliminada...");
