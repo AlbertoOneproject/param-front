@@ -37,6 +37,9 @@ import { ListarProductoComponent } from './ProductoSat/listar-producto/listar-pr
 import { ViewProductosComponent } from './ProductoSat/view-productos/view-productos.component';
 import { ProductoSatService } from './Service/producto-sat.service';
 import { TarjetaService } from './Service/tarjeta.service';
+import { Add061Component } from './Mpdt061/add061/add061.component';
+import { Edit061Component } from './Mpdt061/edit061/edit061.component';
+import { Listar061Component } from './Mpdt061/listar061/listar061.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +63,7 @@ import { TarjetaService } from './Service/tarjeta.service';
     ViewProductosComponent,    /*OMDA*/ 
     AgregarProductoComponent,  /*OMDA*/
     EditarProductoComponent,   /*OMDA*/
-    ListarProductoComponent, AddprodComponent, EditprodComponent,   /*OMDA*/
+    ListarProductoComponent, AddprodComponent, EditprodComponent, Add061Component, Edit061Component, Listar061Component,   /*OMDA*/
     
   ],
   imports: [
