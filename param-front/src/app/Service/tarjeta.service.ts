@@ -6,6 +6,7 @@ import { Tarjeta } from '../Modelo/Tarjeta';
 export class TarjetaService {
   
   lstEntidades : string[];
+  lstMarcas : string[];
 
   constructor(private http:HttpClient) { }
   Url='http://localhost:8080/mpdt025';
@@ -38,8 +39,8 @@ export class TarjetaService {
     return this.http.get<string[]>(this.UrlServ+"/marca?entidad="+entidad);
   }
 
-  getITipTarj(){
-    return this.http.get<string[]>(this.UrlServ+"/itipotarj");
+  getITipTarj(entidad:string, marca:string){
+    return this.http.get<string[]>(this.UrlServ+"/itipotarj?entidad="+entidad+"?marca="+marca);
   }
 
   getBinProc(){
