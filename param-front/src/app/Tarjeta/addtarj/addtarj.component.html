@@ -46,12 +46,33 @@
           </div>
 -->
           <div class="form-group">
+            <label class="mr-sm-2" for="inlineFormCustomSelect">Bin proc</label>
+            <select class="custom-select mr-sm-2" id="idBinProc" name="ITipTarj" [(ngModel)]="binProcSelect" > 
+              <option value="">Seleccione una opción...</option>
+              <option [value]="item" *ngFor="let item of lstBinProc">{{item}}</option>    
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="mr-sm-2" for="inlineFormCustomSelect">Rango superior</label>
+            <select class="custom-select mr-sm-2" id="idRangSup" name="RangSup" [(ngModel)]="rangSupSelect" > 
+              <option value="">Seleccione una opción...</option>
+              <option [value]="item" *ngFor="let item of lstRangSup">{{item}}</option>    
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="mr-sm-2" for="inlineFormCustomSelect">Rango inferior</label>
+            <select class="custom-select mr-sm-2" id="idRangInf" name="RangInf" [(ngModel)]="rangInfSelect" > 
+              <option value="">Seleccione una opción...</option>
+              <option [value]="item" *ngFor="let item of lstRangInf">{{item}}</option>    
+            </select>
+          </div>
+
+
+          <div class="form-group">
             <label for="">BIN Entidad:</label>
             <input [(ngModel)]="tarjeta.binenttip" name="binenttip" type="text" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="">BIN Procedimiento:</label>
-            <input [(ngModel)]="tarjeta.binproc" name="binproc" type="text" class="form-control">
           </div>
           <div class="form-group">
             <label for="">Numero Multi Tarjeta:</label>

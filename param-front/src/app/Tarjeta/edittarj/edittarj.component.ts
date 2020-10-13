@@ -48,7 +48,7 @@ export class EdittarjComponent implements OnInit {
     set: this.tarjeta.contcur =  null;
     this.service.updateTarjeta(this.tarjeta)
     .subscribe(data=>{
-      alert("Se Agrego con Exito...!!!");
+      alert("Se modificó con exito...!");
       this.router.navigate(["listartarj"]);
     })
   }

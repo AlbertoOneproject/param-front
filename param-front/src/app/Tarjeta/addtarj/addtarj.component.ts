@@ -17,6 +17,13 @@ export class AddtarjComponent implements OnInit {
   marcaSelect    : number;
   lstITipTarj    : string[];
   iTipTarjSelect : number;
+  lstBinProc     : string[];
+  binProcSelect  : string;
+  lstRangSup     : string[];
+  rangSupSelect  : string;
+  lstRangInf     : string[];
+  rangInfSelect  : string;
+
   constructor(private service:TarjetaService,private router:Router) { }
 
 //  ngOnInit() {
@@ -37,12 +44,30 @@ export class AddtarjComponent implements OnInit {
       .subscribe(data => {
         this.lstITipTarj = data;
       });
+
+      this.service.getBinProc()
+      .subscribe(data => {
+        this.lstBinProc = data;
+      });
+
+      this.service.getRangSup()
+      .subscribe(data => {
+        this.lstRangSup = data;
+      });
+
+      this.service.getRangInf()
+      .subscribe(data => {
+        this.lstRangInf = data;
+      });
   }
   Guardartarj(){
     set: this.tarjeta.codent = this.entidadSelect;
     set: this.tarjeta.codmar = this.marcaSelect;
     set: this.tarjeta.indtipt = this.iTipTarjSelect;
     
+    set: this.tarjeta.binproc = this.binProcSelect;
+    set: this.tarjeta.rangosup = this.rangSupSelect;
+    set: this.tarjeta.rangoinf = this.rangInfSelect;
 
     set: this.tarjeta.codentumo = "CODE";
     set: this.tarjeta.codofiumo = "CODO";

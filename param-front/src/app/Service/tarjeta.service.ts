@@ -10,6 +10,7 @@ export class TarjetaService {
   constructor(private http:HttpClient) { }
   Url='http://localhost:8080/mpdt025';
   UrlServ='http://localhost:8080/mpdt026';
+  UrlServLim='http://localhost:8080/mpdt061';
 
   getTarjetas(){
     return this.http.get<Tarjeta[]>(this.Url);
@@ -39,6 +40,18 @@ export class TarjetaService {
 
   getITipTarj(){
     return this.http.get<string[]>(this.UrlServ+"/itipotarj");
+  }
+
+  getBinProc(){
+    return this.http.get<string[]>(this.UrlServLim+"/binpre");
+  }
+
+  getRangSup(){
+    return this.http.get<string[]>(this.UrlServLim+"/rangsup");
+  }
+
+  getRangInf(){
+    return this.http.get<string[]>(this.UrlServLim+"/ranginf");
   }
 
 }
