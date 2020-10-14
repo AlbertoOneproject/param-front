@@ -29,6 +29,10 @@ export class AppComponent {
     this.router.navigate(["lista026"]);
   }
 
+  Listar061Component(){
+    this.router.navigate(["lista061"]);
+  }
+
   viewProductos() {
     this.router.navigate(["viewProductos"]);
   }

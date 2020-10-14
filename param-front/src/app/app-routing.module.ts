@@ -14,6 +14,10 @@ import {Listart026Component} from './Mpdt026/listart026/listart026.component';
 import {Addt026Component} from './Mpdt026/addt026/addt026.component';
 import {Edit026Component} from './Mpdt026/edit026/edit026.component';
 
+import {Listar061Component} from './Mpdt061/listar061/listar061.component';
+import {Add061Component} from './Mpdt061/add061/add061.component';
+import {Edit061Component} from './Mpdt061/edit061/edit061.component';
+
 import { ListartarjComponent } from './Tarjeta/listartarj/listartarj.component';
 import { AddtarjComponent } from './Tarjeta/addtarj/addtarj.component';
 import { EdittarjComponent } from './Tarjeta/edittarj/edittarj.component';
@@ -39,6 +43,11 @@ const routes: Routes = [
   {path:'listartarj', component:ListartarjComponent},
   {path:'addtarj',component:AddtarjComponent},
   {path:'edittarj',component:EdittarjComponent},
+
+  {path:'lista061',component:Listar061Component},
+  {path:'add061',component:Add061Component},
+  {path:'edit061',component:Edit061Component},
+
 
   {path: 
     'viewProductos', 
