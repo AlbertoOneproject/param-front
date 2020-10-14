@@ -9,19 +9,35 @@ import { Mpdt061 } from 'src/app/Modelo/Mpdt061';
   styleUrls: ['./listar061.component.css']
 })
 export class Listar061Component implements OnInit {
-  mpdt061s: Mpdt061[];                                                    
+  mpdt061s: Mpdt061[];       
   constructor(private service: Mpdt061Service, private router: Router) { }
 
   ngOnInit() {                
     this.service.getDt061()
       .subscribe(data => {    
-        console.log("data061")
-        console.log(data)
         this.mpdt061s = data; 
-//        console.log(this.mpdt061s.Binpre.value)
-//        console.log(this.mpdt061s.Binpre[1]])
       });                     
   }                           
+  Editar061(mpdt061:Mpdt061):void{
+    localStorage.setItem("binpre",mpdt061.binpre.toString());
+    localStorage.setItem("binprepro",mpdt061.binprepro.toString()); 
+    console.log("llaveCTS"+mpdt061.binpre+mpdt061.binprepro);
+    this.router.navigate(["edit061"]);  
+  }
+
+  deleteMpdt061(mpdt061:Mpdt061){
+    localStorage.setItem("binpre",mpdt061.binpre.toString());
+    localStorage.setItem("binprepro",mpdt061.binprepro.toString()); 
+    this.service.deleteDt061( 
+      mpdt061.binpre.toString(),
+      mpdt061.binprepro.toString())
+        
+     .subscribe( data=>{
+       console.log("llaveCTS"+mpdt061.binpre+mpdt061.binprepro)
+       this.mpdt061s=this.mpdt061s.filter(p=>p!==mpdt061);
+       alert ("Parametro Eliminado")
+     }) 
+    }
   
 
 }

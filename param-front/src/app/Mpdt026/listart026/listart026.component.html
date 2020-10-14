@@ -18,13 +18,13 @@
         <div class="form-row align-items-center ">
             <div class="col-3">
                 <label class="mr-sm-2" for="inlineFormCustomSelect">Entidad</label>
-                <select class="custom-select mr-sm-2" id="selectEntidad" name="selectEntidad" [(ngModel)]="seleccionado " (click)="Buscar()"> 
+                <select class="custom-select mr-sm-2" id="selectEntidad" name="selectEntidad" [(ngModel)]="seleccionado" (click)="Buscar()"> 
         <option value="">Seleccione una opción...</option>
         <option [value]="item" (click)="Buscar()" *ngFor="let item of listaEntidad"> {{item}} </option>    
       </select>
 
             </div>
- 
+
             <div class="col-3">
 
             </div>

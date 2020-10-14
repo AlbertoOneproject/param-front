@@ -1,1 +1,95 @@
-<p>add061 works!</p>
+<div class="container-fluid  mainparam">
+    <div class="row">
+        <div class="col-4">
+        </div>
+        <div class="col-4 text-center">
+            <h3>Bines y Prefijos</h3>
+        </div>
+        <div class="col-4 text-right">
+
+            <a class="btn btn-info btn-lg rounded-circle" href="lista061">
+            </a>
+        </div>
+    </div>
+</div>
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h5>Agregar - Mpdt061</h5>
+        </div>
+        <div class="card-body">
+            <form action="">
+                <div class="form-group">
+                    <label for="">Binpre:</label>
+                    <input [(ngModel)]="mpdt061.binpre" name="binpre" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Binprepro:</label>
+                    <input [(ngModel)]="mpdt061.binprepro" name="binprepro" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Clamon:</label>
+                    <input [(ngModel)]="mpdt061.clamon" name="clamon" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Clase:</label>
+                    <input [(ngModel)]="mpdt061.clase" name="clase" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Cod País:</label>
+                    <input [(ngModel)]="mpdt061.codpais" name="codpais" type="text" class="form-control">
+                </div>
+                <!--
+                <div class="form-group">
+                    <label for="">Icaent:</label>
+                    <input [(ngModel)]="mpdt061.icaent" name="icaent" type="text" class="form-control">
+                </div>
+-->
+                <div class="form-row align-items-center ">
+                    <div class="col-3">
+                        <label class="mr-sm-2" for="inlineFormCustomSelect">Icaent</label>
+                        <select class="custom-select mr-sm-2" id="selectIcaent" name="icaent" [(ngModel)]="mpdt061.icaent"> 
+                <option value="">Seleccione una opción...</option>
+                <option [value]="item" *ngFor="let item of ListaIcaent">{{item}}</option> 
+                    </select>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="">Ind Rango:</label>
+                    <input [(ngModel)]="mpdt061.indrango" name="indrango" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Long Tar:</label>
+                    <input [(ngModel)]="mpdt061.longtar" name="longtar" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Nombre Ent.:</label>
+                    <input [(ngModel)]="mpdt061.noment" name="noment" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Pais Ent:</label>
+                    <input [(ngModel)]="mpdt061.paisent" name="paisent" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Rango Inferior:</label>
+                    <input [(ngModel)]="mpdt061.rangoinf" name="rangoinf" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Rango Superior:</label>
+                    <input [(ngModel)]="mpdt061.rangosup" name="rangosup" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Sitcompen:</label>
+                    <input [(ngModel)]="mpdt061.sitcompen" name="sitcompen" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Sitent:</label>
+                    <input [(ngModel)]="mpdt061.sitent" name="sitent" type="text" class="form-control">
+                </div>
+                <button (click)="Guardar026()" class="btn btn-danger">Guardar</button>
+            </form>
+        </div>
+    </div>
+</div>
