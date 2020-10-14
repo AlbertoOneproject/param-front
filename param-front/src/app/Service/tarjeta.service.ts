@@ -40,7 +40,7 @@ export class TarjetaService {
   }
 
   getITipTarj(entidad:string, marca:string){
-    return this.http.get<string[]>(this.UrlServ+"/itipotarj?entidad="+entidad+"?marca="+marca);
+    return this.http.get<string[]>(this.UrlServ+"/itipotarj?entidad="+entidad+"&marca="+marca);
   }
 
   getBinProc(){
