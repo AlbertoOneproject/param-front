@@ -34,8 +34,8 @@ export class TarjetaService {
     return this.http.get<string[]>(this.UrlServ+"/entidad");
   } 
   
-  getMarcas(){
-    return this.http.get<string[]>(this.UrlServ+"/marca");
+  getMarcas(entidad:string){
+    return this.http.get<string[]>(this.UrlServ+"/marca?entidad="+entidad);
   }
 
   getITipTarj(){

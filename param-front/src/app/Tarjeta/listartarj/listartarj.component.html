@@ -12,9 +12,10 @@
             <th>INDICADOR TIPO DE TARJETA</th>
             <th>BIN ENTIDAD TIPO</th>              
             <th>NUMERO DE TARJETA</th>
-            <th>bin proceso</th>
-            <th>Rango inferior</th>
-            <th>Rango superior</th>
+            <th>BIN PROCESO</th>
+            <th>RANGO INFERIOR</th>
+            <th>RANGO SUPERIOR</th>
+            <th>EXPONENTE</th>
             <th>ACCIONES</th>
           </tr>
         </thead>
@@ -28,6 +29,7 @@
             <td>{{tarjeta.binproc}}</td>
             <td>{{tarjeta.rangoinf}}</td>
             <td>{{tarjeta.rangosup}}</td>
+            <td>{{tarjeta.exponente}}</td>
             <td>
               <button (click)="Edittarj(tarjeta)" class="btn btn-warning">Editar</button>
               <button (click)="Deletetarj(tarjeta)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>

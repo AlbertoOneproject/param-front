@@ -23,6 +23,7 @@ export class AddtarjComponent implements OnInit {
   rangSupSelect  : string;
   lstRangInf     : string[];
   rangInfSelect  : string;
+  
 
   constructor(private service:TarjetaService,private router:Router) { }
 
@@ -34,32 +35,51 @@ export class AddtarjComponent implements OnInit {
       .subscribe(data => {
         this.lstEntidades = data;
       });
+ //  this.service.getMarcas()
+ //     .subscribe(data => {
+ //       this.lstMarcas = data;
+ //     });
+ //
+ //     this.service.getITipTarj()
+ //     .subscribe(data => {
+ //       this.lstITipTarj = data;
+ //     });
+//
+//      this.service.getBinProc()
+//      .subscribe(data => {
+//        this.lstBinProc = data;
+//      });
 
-      this.service.getMarcas()
-      .subscribe(data => {
-        this.lstMarcas = data;
-      });
+//      this.service.getRangSup()
+//      .subscribe(data => {
+//        this.lstRangSup = data;
+//      });
 
-      this.service.getITipTarj()
-      .subscribe(data => {
-        this.lstITipTarj = data;
-      });
+//      this.service.getRangInf()
+//      .subscribe(data => {
+//        this.lstRangInf = data;
+//      });
 
-      this.service.getBinProc()
-      .subscribe(data => {
-        this.lstBinProc = data;
-      });
-
-      this.service.getRangSup()
-      .subscribe(data => {
-        this.lstRangSup = data;
-      });
-
-      this.service.getRangInf()
-      .subscribe(data => {
-        this.lstRangInf = data;
-      });
   }
+
+  public onOptionsSelected(event) {
+
+    console.log(this.entidadSelect.toString());
+  
+    this.service.getMarcas(this.entidadSelect.toString())
+    .subscribe(data => {
+      this.lstMarcas = data;
+    });
+  }
+
+
+
+
+
+
+
+
+
   Guardartarj(){
     set: this.tarjeta.codent = this.entidadSelect;
     set: this.tarjeta.codmar = this.marcaSelect;
