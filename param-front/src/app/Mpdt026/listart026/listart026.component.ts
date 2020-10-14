@@ -28,7 +28,7 @@ export class Listart026Component implements OnInit {
   Buscar(){
 //jasg    this.service.getMpdt026Filtro(this.seleccionado,'')
      console.log("Buscar")
-    this.service.getMpdt026Marca(this.seleccionado,'')  
+    this.service.getMpdt026Marca(this.seleccionado)  
     .subscribe(data => {
       console.log("Data Marca")
       console.log(data)
