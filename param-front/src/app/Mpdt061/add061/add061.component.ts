@@ -13,7 +13,7 @@ export class Add061Component implements OnInit {
   
   mpdt061:Mpdt061 = new Mpdt061();
   public ListaIcaent: string[];  
-  public icaent: string;                                           
+  //public icaent: string;                                           
 
   constructor(private router:Router,private service:Mpdt061Service) { }
 
