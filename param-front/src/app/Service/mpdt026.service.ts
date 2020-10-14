@@ -36,12 +36,11 @@ export class Mpdt026Service {
       }
 
     //Nueva consulta de Marca
-    getMpdt026Marca(entidad:String,marca:String
-      ){
+    getMpdt026Marca(entidad:String){
         console.log("entidad para marca");
-        console.log(entidad)
+        console.log(entidad);
         
-       return this.http.get<string[]>(this.Url+"/mpdt026/"+entidad);
+       return this.http.get<string[]>(this.Url + "/marca?entidad=" + entidad);
       }
 
       
