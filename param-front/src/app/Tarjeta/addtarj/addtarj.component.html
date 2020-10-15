@@ -13,12 +13,7 @@
               <option [value]="item" *ngFor="let item of lstEntidades">{{item}}</option>    
             </select>
           </div>
-<!-- 
-         <div class="form-group">
-            <label for="">Entidad:</label>
-            <input [(ngModel)]="tarjeta.codent" name="codent" type="text" class="form-control">
-          </div>
---> 
+ 
           <div class="form-group">
             <label class="mr-sm-2" for="inlineFormCustomSelect">Código de marca</label>
             <select class="custom-select mr-sm-2" id="idMarca" name="idMarca" [(ngModel)]="marcaSelect" (change)='onOptionsSelectedMarca($event)' required> 
@@ -26,12 +21,7 @@
               <option [value]="item" *ngFor="let item of lstMarcas">{{item}}</option>    
             </select>
           </div>
-<!--
-          <div class="form-group">
-            <label for="">Código Marca:</label>
-            <input [(ngModel)]="tarjeta.codmar" name="codmar" type="text" class="form-control">
-          </div>
--->
+
           <div class="form-group">
             <label class="mr-sm-2" for="inlineFormCustomSelect">Indicador de tipo de tarjeta</label>
             <select class="custom-select mr-sm-2" id="idITipTarj" name="ITipTarj" [(ngModel)]="iTipTarjSelect" > 
@@ -39,15 +29,10 @@
               <option [value]="item" *ngFor="let item of lstITipTarj">{{item}}</option>    
             </select>
           </div>
-<!--
-          <div class="form-group">
-            <label for="">Ind Tipo de Tarj:</label>
-            <input [(ngModel)]="tarjeta.indtipt" name="indtipt" type="text" class="form-control">
-          </div>
--->
+
           <div class="form-group">
             <label class="mr-sm-2" for="inlineFormCustomSelect">Bin proc</label>
-            <select class="custom-select mr-sm-2" id="idBinProc" name="ITipTarj" [(ngModel)]="binProcSelect" > 
+            <select class="custom-select mr-sm-2" id="idBinProc" name="ITipTarj" [(ngModel)]="binProcSelect" (change)='onOptionsSelectedBinproc($event)' required > 
               <option value="">Seleccione una opción...</option>
               <option [value]="item" *ngFor="let item of lstBinProc">{{item}}</option>    
             </select>
@@ -55,7 +40,7 @@
 
           <div class="form-group">
             <label class="mr-sm-2" for="inlineFormCustomSelect">Rango superior</label>
-            <select class="custom-select mr-sm-2" id="idRangSup" name="RangSup" [(ngModel)]="rangSupSelect" > 
+            <select class="custom-select mr-sm-2" id="idRangSup" name="RangSup" [(ngModel)]="rangSupSelect" (change)='onOptionsSelectedRangoS($event)' required > 
               <option value="">Seleccione una opción...</option>
               <option [value]="item" *ngFor="let item of lstRangSup">{{item}}</option>    
             </select>

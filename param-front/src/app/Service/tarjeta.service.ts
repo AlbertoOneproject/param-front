@@ -47,12 +47,12 @@ export class TarjetaService {
     return this.http.get<string[]>(this.UrlServLim+"/binpre");
   }
 
-  getRangSup(){
-    return this.http.get<string[]>(this.UrlServLim+"/rangsup");
+  getRangSup(binproc:string){
+    return this.http.get<string[]>(this.UrlServLim+"/rangsup?binpre="+binproc);
   }
 
-  getRangInf(){
-    return this.http.get<string[]>(this.UrlServLim+"/ranginf");
+  getRangInf(binproc:string, rangsup:string){
+    return this.http.get<string[]>(this.UrlServLim+"/ranginf?binpre="+binproc+"&rangsup="+rangsup);
   }
 
 }
