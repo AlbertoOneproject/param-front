@@ -23,7 +23,6 @@ import { Mpdt088Service} from '../app/Service/mpdt088.service';
 import { AltaComponent } from '../app/Mpdt088/alta';
 import { EditarComponent } from '../app/Mpdt088/editar';
 import { ListarComponent } from '../app/Mpdt088/listar';
-import { DialogoConfirmacionComponent } from '../app/Mpdt088/dialogo-confirmacion';
 import { Listart026Component } from './Mpdt026/listart026/listart026.component';
 import { Edit026Component } from './Mpdt026/edit026/edit026.component';
 import { Addt026Component } from './Mpdt026/addt026/addt026.component';
@@ -55,7 +54,6 @@ import { Listar061Component } from './Mpdt061/listar061/listar061.component';
     AltaComponent,
     EditarComponent,
     ListarComponent,
-    DialogoConfirmacionComponent,
     AddtarjComponent,
     EdittarjComponent,
     ListartarjComponent,
