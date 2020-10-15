@@ -1,132 +1,58 @@
-<mat-card class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title >PARÁMETROS</mat-card-title>
-      <div style="width: 100%; text-align: right; padding-right: 50px;" class="example-button-row">
-        <button mat-raised-button color="primary" (click)="listarMpdt088()">Listar</button>
-        <button mat-raised-button color="primary" (click)="openDialog()">Nuevo</button>
-      </div>
-    </mat-card-header> 
-    <mat-card-content>
-    <mat-table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-     <ng-container matColumnDef="codent">
-          <mat-header-cell *matHeaderCellDef>CODENT</mat-header-cell>
-          <mat-cell *matCellDef="let row;">{{row.codent}}</mat-cell>
-     </ng-container>
-     <ng-container matColumnDef="producto">
-          <mat-header-cell *matHeaderCellDef>PRODUCTO</mat-header-cell>
-          <mat-cell *matCellDef="let row;">{{row.producto}}</mat-cell>
-     </ng-container>
-     <ng-container matColumnDef="subprodu">
-          <mat-header-cell *matHeaderCellDef>SUBPRODU</mat-header-cell>
-          <mat-cell *matCellDef="let row;">{{row.subprodu}}</mat-cell>
-     </ng-container>
-     <ng-container matColumnDef="codmar">
-          <mat-header-cell *matHeaderCellDef>CONDPRO</mat-header-cell>
-          <mat-cell *matCellDef="let row;">{{row.codmar}}</mat-cell>
-     </ng-container>
-     <ng-container matColumnDef="indtipt">
-          <mat-header-cell *matHeaderCellDef>CODCAM</mat-header-cell>
-          <mat-cell *matCellDef="let row;">{{row.indtipt}}</mat-cell>
-     </ng-container>
-     <ng-container matColumnDef="fecalta">
-          <mat-header-cell *matHeaderCellDef>CONCONVEN</mat-header-cell>
-          <mat-cell *matCellDef="let row;">{{row.fecalta}}</mat-cell>
-     </ng-container>
-     <ng-container matColumnDef="fecbaja">
-          <mat-header-cell *matHeaderCellDef>CODPROMO</mat-header-cell>
-          <mat-cell *matCellDef="let row;">{{row.fecbaja}}</mat-cell>
-     </ng-container>
-     <ng-container matColumnDef="limcremes">
-          <mat-header-cell *matHeaderCellDef>NUMPER</mat-header-cell>
-          <mat-cell *matCellDef="let row;">{{row.limcremes}}</mat-cell>
-     </ng-container>
-     <ng-container matColumnDef="limdebmes">
-          <mat-header-cell *matHeaderCellDef>NUMPERAVAL</mat-header-cell>
-          <mat-cell *matCellDef="let row;">{{row.limdebmes}}</mat-cell>
-      </ng-container>
-     <ng-container matColumnDef="maxoper">
-          <mat-header-cell *matHeaderCellDef>INDCTAEMP</mat-header-cell>
-          <mat-cell *matCellDef="let row;">{{row.maxoper}}</mat-cell>
-      </ng-container>
-      <ng-container matColumnDef="limcredia">
-        <mat-header-cell *matHeaderCellDef>INDCTAEMP</mat-header-cell>
-        <mat-cell *matCellDef="let row;">{{row.limcredia}}</mat-cell>
-    </ng-container>
-    <ng-container matColumnDef="limdebdia">
-        <mat-header-cell *matHeaderCellDef>INDCTAEMP</mat-header-cell>
-        <mat-cell *matCellDef="let row;">{{row.limdebdia}}</mat-cell>
-    </ng-container>
-    <ng-container matColumnDef="limdiacaj">
-        <mat-header-cell *matHeaderCellDef>INDCTAEMP</mat-header-cell>
-        <mat-cell *matCellDef="let row;">{{row.limdiacaj}}</mat-cell>
-    </ng-container>
-    <ng-container matColumnDef="maxodia">
-        <mat-header-cell *matHeaderCellDef>INDCTAEMP</mat-header-cell>
-        <mat-cell *matCellDef="let row;">{{row.maxodia}}</mat-cell>
-    </ng-container>
-    <ng-container matColumnDef="salmaxmon">
-        <mat-header-cell *matHeaderCellDef>INDCTAEMP</mat-header-cell>
-        <mat-cell *matCellDef="let row;">{{row.salmaxmon}}</mat-cell>
-    </ng-container>
-    <ng-container matColumnDef="cargamax">
-        <mat-header-cell *matHeaderCellDef>INDCTAEMP</mat-header-cell>
-        <mat-cell *matCellDef="let row;">{{row.cargamax}}</mat-cell>
-    </ng-container>
-    <ng-container matColumnDef="consumax">
-        <mat-header-cell *matHeaderCellDef>INDCTAEMP</mat-header-cell>
-        <mat-cell *matCellDef="let row;">{{row.consumax}}</mat-cell>
-    </ng-container>
-    <ng-container matColumnDef="indacpalt">
-        <mat-header-cell *matHeaderCellDef>INDCTAEMP</mat-header-cell>
-        <mat-cell *matCellDef="let row;">{{row.indacpalt}}</mat-cell>
-    </ng-container>
-    <ng-container matColumnDef="indacpren">
-        <mat-header-cell *matHeaderCellDef>INDCTAEMP</mat-header-cell>
-        <mat-cell *matCellDef="let row;">{{row.indacpren}}</mat-cell>
-    </ng-container>
-    <ng-container matColumnDef="vigtar">
-        <mat-header-cell *matHeaderCellDef>INDCTAEMP</mat-header-cell>
-        <mat-cell *matCellDef="let row;">{{row.vigtar}}</mat-cell>
-    </ng-container>
-    <ng-container matColumnDef="vigtarren">
-        <mat-header-cell *matHeaderCellDef>INDCTAEMP</mat-header-cell>
-        <mat-cell *matCellDef="let row;">{{row.vigtarren}}</mat-cell>
-    </ng-container>
-    <ng-container matColumnDef="codentumo">
-        <mat-header-cell *matHeaderCellDef>INDCTAEMP</mat-header-cell>
-        <mat-cell *matCellDef="let row;">{{row.codentumo}}</mat-cell>
-    </ng-container>
-    <ng-container matColumnDef="codofiumo">
-        <mat-header-cell *matHeaderCellDef>INDCTAEMP</mat-header-cell>
-        <mat-cell *matCellDef="let row;">{{row.codofiumo}}</mat-cell>
-    </ng-container>
-    <ng-container matColumnDef="usuarioumo">
-        <mat-header-cell *matHeaderCellDef>INDCTAEMP</mat-header-cell>
-        <mat-cell *matCellDef="let row;">{{row.usuarioumo}}</mat-cell>
-    </ng-container>
-    <ng-container matColumnDef="codtermumo">
-        <mat-header-cell *matHeaderCellDef>INDCTAEMP</mat-header-cell>
-        <mat-cell *matCellDef="let row;">{{row.codtermumo}}</mat-cell>
-    </ng-container>
-    <ng-container matColumnDef="contcur">
-        <mat-header-cell *matHeaderCellDef>INDCTAEMP</mat-header-cell>
-        <mat-cell *matCellDef="let row;">{{row.contcur}}</mat-cell>
-    </ng-container>
-     <ng-container matColumnDef="actions">
-          <mat-header-cell *matHeaderCellDef></mat-header-cell>
-          <mat-cell *matCellDef="let row;">
-        <button mat-icon-button (click)="editaMpdt088(row)">
-          <mat-icon >edit</mat-icon>        
-        </button>
-        <button mat-icon-button (click)="openDialogConfirm('Delete',row)">
-          <mat-icon color="warn">delete</mat-icon>
-        </button>
-      </mat-cell>
-      </ng-container>
-      <mat-header-row *matHeaderRowDef="displayedColumns">
-      </mat-header-row>
-      <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
-  </mat-table>
-  </mat-card-content>
-  </mat-card>
+<!---Titulo y boton de agregar -->
+<div class="container-fluid  mainparam">
+    <div class="row">
+        <div class="col-4">
+        </div>
+        <div class="col-4 text-center">
+            <h3>Tipo Tarjeta producto</h3>
+        </div>
+        <div class="col-4 text-right">
+
+            <a class="btn btn-success btn-lg rounded-circle" href="alta" >+</a>
+        </div>
+    </div>
+</div>
+<!--seccion de busqueda-->
+<div class="container-fluid mainparam">
+    <form>
+       
+    <!--Poner combos-->
+
+    </form>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h5>Lista registros - Mpdt088</h5>
+    </div>
+    <div class="card-body">
+        <table class="table table-hover">
+            <thead>
+                <tr class="text-center">
+                    <th>CODENT</th>
+                    <th>PRODUCTO</th>
+                    <th>SUBPRODU</th>
+                    <th>CODMAR</th>
+                    <th>INDTIPT</th>
+                    <th>FECALTA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let mpdt088 of mpdt088s" class="text-center">
+                    <td>{{mpdt088.codent}}</td>
+                    <td>{{mpdt088.producto}}</td>
+                    <td>{{mpdt088.subprodu}}</td>
+                    <td>{{mpdt088.codmar}}</td>
+                    <td>{{mpdt088.indtipt}}</td>
+                    <td>{{mpdt088.fecalta}}</td>
+                    <td>
+                        <button (click)="editarMpdt088(mpdt088)" class="btn btn-warning">Editar</button>
+                        <button (click)="deleteMpdt088(mpdt088)" class="btn btn-danger"
+                            style="margin-left: 10px;">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>

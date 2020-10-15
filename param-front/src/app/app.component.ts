@@ -40,4 +40,8 @@ export class AppComponent {
   listartarj() {
     this.router.navigate(["listartarj"]);
   }
+
+  listar() {
+    this.router.navigate(["listar"]);
+  }
 }

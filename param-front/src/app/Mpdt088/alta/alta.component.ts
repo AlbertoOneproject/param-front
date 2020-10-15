@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, FormControl, Validators  } from '@angular/forms';
+import { FormBuilder} from '@angular/forms';
 import { Mpdt088 } from '../../Modelo/mpdt088.model';
 import { Mpdt088Service } from '../../Service/mpdt088.service';
 import { Router } from '@angular/router';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { ProductoService } from '../../Service/producto.service';
+import { TarjetaService } from '../../Service/tarjeta.service';
+import { timer } from 'rxjs';
+
 
 
 @Component({
@@ -12,109 +15,113 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrls: ['./alta.component.css']
 })
 export class AltaComponent implements OnInit {
-  altaMpdt088: FormGroup;
-  mpdt088: Mpdt088;
-
-  codent;
-  producto;
-  subprodu;
-  codmar;
-  indtipt;
-  fecalta;
-  fecbaja;
-  limcremes;
-  limdebmes;
-  maxoper;
-  limcredia;
-  limdebdia;
-  limdiacaj;
-  maxopecaj;
-  maxodia;
-  salmaxmon;
-  cargamax;
-  consumax;
-  indacpalt;
-  indacpren;
-  vigtar;
-  vigtarren;
-  codentumo;
-  codofiumo;
-  usuarioumo;
-  codtermumo;
-  contcur;
-
+  mpdt088: Mpdt088 = new Mpdt088();
+  lstEntidades: string[];
+  lstProductos: string[];
+  lstSubProductos: string[];
+  lstMarcas: string[];
+  lstTpoTarjeta: string[];
+  entidadSelect : string;
+  productoSelect : string;
+  subProductoSelect : string;
+  marcasSelect: string;
+  tpoTarSelect: string;
+  entidad: string;
 
   constructor(private formBuilder: FormBuilder,
     private service: Mpdt088Service, 
     private router: Router,
-    public dialogRef: MatDialogRef<AltaComponent>) { }
+    private serviceProducto: ProductoService,
+    private serviceTarjeta: TarjetaService) { }
 
   ngOnInit(): void {
 
-     this.altaMpdt088 = this.formBuilder.group({
-       'codent': new FormControl('', [Validators.required]),
-       'producto': new FormControl('', [Validators.required]),
-       'subprodu': new FormControl('', [Validators.required]),
-       'codmar': new FormControl('', [Validators.required]),
-       'indtipt': new FormControl('', [Validators.required]),
-       'fecalta': new FormControl('', [Validators.required]),
-       'fecbaja': new FormControl('', [Validators.required]),
-       'limcremes': new FormControl('', [Validators.required]),
-       'limdebmes': new FormControl('', [Validators.required]),
-       'maxoper': new FormControl('', [Validators.required]),
-       'limcredia': new FormControl('', [Validators.required]),
-       'limdebdia': new FormControl('', [Validators.required]),
-       'limdiacaj': new FormControl('', [Validators.required]),
-       'maxopecaj': new FormControl('', [Validators.required]),
-       'maxodia': new FormControl('', [Validators.required]),
-       'salmoxon': new FormControl('', [Validators.required]),
-       'cargamax': new FormControl('', [Validators.required]),
-       'consumax': new FormControl('', [Validators.required]),
-       'indacpalt': new FormControl('', [Validators.required]),
-       'indacpren': new FormControl('', [Validators.required]),
-       'vigtar': new FormControl('', [Validators.required]),
-       'vigtarren': new FormControl('', [Validators.required]),
-       'codentumo': new FormControl('', [Validators.required]),
-       'codofiumo': new FormControl('', [Validators.required]),
-       'usuarioumo': new FormControl('', [Validators.required]),
-       'codtermumo': new FormControl('', [Validators.required]),
-       'contcur': new FormControl('', [Validators.required])
-     });
+    this.serviceProducto.getLstEntidades()
+    .subscribe(data => {
+
+      this.lstEntidades = data;
+    });
 
   }
 
-  get ant1() { return this.altaMpdt088.controls; }
 
   addMpdt088(){
-
-
-    if (this.altaMpdt088.invalid){
-        return;
-    }
-
     
-    this.mpdt088 = {codent: this.ant1.codent.value, producto: this.ant1.producto.value, subprodu: this.ant1.subprodu.value,
-      codmar: this.ant1.codmar.value, indtipt: this.ant1.indtipt.value, fecalta: this.ant1.fecalta.value, 
-      fecbaja: this.ant1.fecbaja.value, limcremes: this.ant1.limcremes.value, limdebmes: this.ant1.limdebmes.value,
-      maxoper: this.ant1.maxoper.value, limcredia: this.ant1.limcredia.value, limdebdia: this.ant1.limdebdia.value,
-      limdiacaj: this.ant1.limdiacaj.value, maxopecaj: this.ant1.maxopecaj.value, maxodia: this.ant1.maxodia.value,
-      salmaxmon: this.ant1.salmaxmon.value, cargamax: this.ant1.cargamax.value, consumax: this.ant1.consumax.value,
-      indacpalt: this.ant1.indacpalt.value, indacpren: this.ant1.indacpren.value, vigtar: this.ant1.vigtar.value,
-      vigtarren: this.ant1.vigtarren.value, codentumo: this.ant1.codentumo.value, codofiumo: this.ant1.codofiumo.value,
-      usuarioumo: this.ant1.usuarioumo.value, codtermumo: this.ant1.limdiacaj.value, contcur: this.ant1.contcur.value} 
 
+    set: this.mpdt088.codent = this.entidadSelect.toString();
+    set: this.mpdt088.producto = this.productoSelect.toString();      
+    set: this.mpdt088.subprodu = this.subProductoSelect.toString(); 
+    set: this.mpdt088.codmar = Number(this.marcasSelect.toString()); 
+    set: this.mpdt088.indtipt = Number(this.subProductoSelect.toString()); 
+    set: this.mpdt088.fecalta = "2020-02-14"; 
+    set: this.mpdt088.fecbaja = "2020-02-14"; 
+    set: this.mpdt088.limcremes = 0.00; 
+    set: this.mpdt088.limdebmes = 0.00; 
+    set: this.mpdt088.maxoper =3; 
+    set: this.mpdt088.limcredia = 0.00; 
+    set: this.mpdt088.limdebdia = 0.00; 
+    set: this.mpdt088.limdiacaj = 0.00; 
+    set: this.mpdt088.maxopecaj = 7; 
+    set: this.mpdt088.maxodia = 8; 
+    set: this.mpdt088.salmaxmon = 0.00; 
+    set: this.mpdt088.cargamax = 0.00; 
+    set: this.mpdt088.consumax = 0.00; 
+    set: this.mpdt088.indacpalt = "Y"; 
+    set: this.mpdt088.indacpren = "Z"; 
+    set: this.mpdt088.vigtar = 12; 
+    set: this.mpdt088.vigtarren = 13; 
+    set: this.mpdt088.codentumo = "aaaa"; 
+    set: this.mpdt088.codofiumo = "bbbb"; 
+    set: this.mpdt088.usuarioumo = "cccc";
+    set: this.mpdt088.codtermumo = "dddd";
+    set: this.mpdt088.contcur = "2020-02-17 18:00:34";  
+
+ 
     this.service.createMpdt088(this.mpdt088)
     .subscribe(data=>{
       alert("Se Agrego con Exito...!!!");
-      this.dialogRef.close();
       this.router.navigate(["listar"]);
 
     })
   }
 
-  cancelar(){
+  public onOptionsSelected(event) {
+  
+    this.entidad = this.entidadSelect.toString();
+    this.serviceProducto.getProductosSat(this.entidadSelect.toString())
+    .subscribe(data => {
+      this.lstProductos = data;
+    });
 
-    this.dialogRef.close();
+  // this.buscarMarca(this.entidad);
+  
+  }
+
+  public onOptionsSelectedProd(event) {
+
+    this.subProductoSelect = "";
+
+    this.serviceProducto.getLstSubProductos(this.entidadSelect.toString() + this.productoSelect.toString())
+      .subscribe(data => {
+        this.lstSubProductos = data;
+      });
+
+  }
+
+  public onOptionsSelectedMarca(event) {
+
+    this.serviceTarjeta.getMarcas(this.entidad)
+    .subscribe(data => {
+      this.lstMarcas = data;
+  })
+  }
+
+  public onOptionsSelectedTpoTarjeta(event) {
+
+    this.serviceTarjeta.getITipTarj(this.entidad.toString(), this.marcasSelect.toString())
+    .subscribe(data => {
+      this.lstTpoTarjeta = data;
+  })
   }
 
 }
