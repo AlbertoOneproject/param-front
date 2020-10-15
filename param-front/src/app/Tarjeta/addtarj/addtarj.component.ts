@@ -74,7 +74,7 @@ export class AddtarjComponent implements OnInit {
 
 
   public onOptionsSelectedMarca(event) {
-
+    console.log(this.entidadSelect.toString());
     console.log(this.marcaSelect.toString());
   
     this.service.getITipTarj(this.entidadSelect.toString(),this.marcaSelect.toString())
