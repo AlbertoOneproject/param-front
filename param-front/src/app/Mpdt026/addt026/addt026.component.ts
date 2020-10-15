@@ -12,6 +12,9 @@ import { Mpdt026} from 'src/app/Modelo/Mpdt026';
 export class Addt026Component implements OnInit {
 
   mpdt026:Mpdt026 = new Mpdt026();
+  lstEntidades : string[];
+  lstProductos : string[];
+  lstSubProductos : string[];
 
   constructor(private router:Router,private service:Mpdt026Service) { }
   

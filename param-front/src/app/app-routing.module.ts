@@ -27,6 +27,10 @@ import { ListarProductoComponent } from './ProductoSat/listar-producto/listar-pr
 import { EditarProductoComponent } from './ProductoSat/editar-producto/editar-producto.component';
 import { AgregarProductoComponent } from './ProductoSat/agregar-producto/agregar-producto.component';
 
+import { ListarComponent } from './Mpdt088/listar/listar.component';
+import { AltaComponent } from './Mpdt088/alta/alta.component';
+import { EditarComponent } from './Mpdt088/editar/editar.component';
+
 const routes: Routes = [
   {path:'listarparm', component:ParmlistComponent},
   {path:'addparm',component:ParmaddComponent},
@@ -47,6 +51,10 @@ const routes: Routes = [
   {path:'lista061',component:Listar061Component},
   {path:'add061',component:Add061Component},
   {path:'edit061',component:Edit061Component},
+
+  {path:'listar',component:ListarComponent},
+  {path:'alta',component:AltaComponent},
+  {path:'editar',component:EditarComponent},
 
 
   {path: 
