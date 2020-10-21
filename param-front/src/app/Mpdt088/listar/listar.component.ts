@@ -14,12 +14,11 @@ export class ListarComponent implements OnInit {
 
   constructor(private service: Mpdt088Service, private router: Router) { }
 
-  ngOnInit() {
-   
+  ngOnInit() {   
    this.consultar();
-
   }
 
+  //consulta
   consultar() {
     this.service.getMpdt088().subscribe(data => {
       this.mpdt088s = data;
