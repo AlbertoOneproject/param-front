@@ -45,10 +45,10 @@ export class AddtarjComponent implements OnInit {
  //       this.lstITipTarj = data;
  //     });
 //
-//      this.service.getBinProc()
-//      .subscribe(data => {
-//        this.lstBinProc = data;
-//      });
+      this.service.getBinProc()
+      .subscribe(data => {
+        this.lstBinProc = data;
+      });
 
 //      this.service.getRangSup()
 //      .subscribe(data => {
@@ -74,7 +74,7 @@ export class AddtarjComponent implements OnInit {
 
 
   public onOptionsSelectedMarca(event) {
-
+    console.log(this.entidadSelect.toString());
     console.log(this.marcaSelect.toString());
   
     this.service.getITipTarj(this.entidadSelect.toString(),this.marcaSelect.toString())
@@ -82,10 +82,27 @@ export class AddtarjComponent implements OnInit {
       this.lstITipTarj = data;
     });
   }
+         
+  public onOptionsSelectedBinproc(event) {
 
+    console.log(this.binProcSelect.toString());
+  
+    this.service.getRangSup(this.binProcSelect.toString())
+    .subscribe(data => {
+      this.lstRangSup = data;
+    });
+  }
 
+       
+  public onOptionsSelectedRangoS(event) {
 
-
+    console.log(this.rangSupSelect.toString());
+  
+    this.service.getRangInf(this.binProcSelect.toString(),this.rangSupSelect.toString())
+    .subscribe(data => {
+      this.lstRangInf = data;
+    });
+  }
 
 
 
